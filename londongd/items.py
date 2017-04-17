@@ -26,3 +26,23 @@ class LondongdItem(scrapy.Item):
 	spider = Field()
 	server = Field()
 	date = Field()
+
+
+class EhfmatchItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	title = Field()
+	link = Field()
+	image = Field()
+	datetime_object = Field()
+	time = Field()
+	teams = Field()
+	
+	# Housekeeping fields
+	url = Field()
+	project = Field()
+	spider = Field()
+	server = Field()
+	date = Field()	

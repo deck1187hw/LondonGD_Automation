@@ -64,9 +64,24 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'londongd.pipelines.LondongdPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'londongd.pipelines.LondongdPipelineMongodb': 300
+}
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "stackoverflow"
+MONGODB_COLLECTION = "ehfmatches"
+
+
+
+#Database settings
+DB_HOST = 'localhost'
+DB_PORT = 3306
+DB_USER = 'user'
+DB_PASSWD = 'password'
+DB_DB = 'database'
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
