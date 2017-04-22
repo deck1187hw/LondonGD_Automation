@@ -14,26 +14,28 @@ class EhfmatchesSpider(scrapy.Spider):
         items = []
 
         for li in response.css('ul.listview > li'):
-
-    	 	item = EhfmatchItem()
-
-        	img = li.css("img").xpath("@src")
-        	imageURL = img.extract_first()
-
-        	link = li.css('a::attr(href)').extract_first()
-        	title = li.css('h4::text').extract_first()        	
         	date_1 = li.css('h2::text').extract_first()        
         	datetime_object = datetime.datetime.strptime(date_1, "%A, %d.%m.%Y").date()
-        	time = li.css('h5::text').extract_first()
-        	teams = li.css('h3::text').extract_first()
 
-        	item['image'] = imageURL
-        	item['link'] = link
-        	item['title'] = title
-        	item['datetime_object'] = date_1
-        	item['time'] = time
-        	item['teams'] = teams
+        	for li2 in li.css('ul > li'):
 
-        	items.append(item)
+	    	 	item = EhfmatchItem()
+
+	        	img = li2.css("img").xpath("@src")
+	        	imageURL = img.extract_first()
+
+	        	link = li2.css('a::attr(href)').extract_first()
+	        	title = li2.css('h4::text').extract_first()   
+	        	time = li2.css('h5::text').extract_first()
+	        	teams = li2.css('h3::text').extract_first()
+
+	        	item['image'] = imageURL
+	        	item['link'] = link
+	        	item['title'] = title
+	        	item['datetime_object'] = date_1
+	        	item['time'] = time
+	        	item['teams'] = teams
+
+        		items.append(item)
 
     	return items
