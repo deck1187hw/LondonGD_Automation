@@ -68,19 +68,12 @@ ITEM_PIPELINES = {
     'londongd.pipelines.LondongdPipelineMongodb': 300
 }
 
-MONGODB_SERVER = "127.0.0.1"
+MONGODB_SERVER = "178.62.27.154"
 MONGODB_PORT = 27017
 MONGODB_DB = "londongd"
 MONGODB_COLLECTION = "ehfmatches"
 
 
-
-#Database settings
-DB_HOST = 'localhost'
-DB_PORT = 3306
-DB_USER = 'user'
-DB_PASSWD = 'password'
-DB_DB = 'database'
 
 
 # Enable and configure the AutoThrottle extension (disabled by default)
