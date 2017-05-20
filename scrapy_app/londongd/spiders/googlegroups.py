@@ -25,7 +25,7 @@ class GooglegroupsSpider(scrapy.Spider):
     	print "LOGIN2"
     	return scrapy.FormRequest.from_response(
 	        response,
-	        formdata={'Passwd': '@Callthelaw88'},
+	        formdata={'Passwd': '*****'},
 	        callback=self.check_login_response)
 
     def check_login_response(self, response):
