@@ -12,6 +12,7 @@ Automation tools built in Python Scrapy to automate common tasks for London GD H
 $ git clone https://github.com/deck1187hw/londongdautomation.git
 $ cd londongd
 $ scrapy crawl classifications
+$ scrapy crawl kempa
 ```
 
 
