@@ -8,6 +8,11 @@ from scrapy.loader import ItemLoader
 class EhfmatchesSpider(scrapy.Spider):
     name = 'ehfmatches'
     start_urls = ['http://www.ehftv.com/gb/livestream-calendar']
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'londongd.pipelines.KempaPipeline':100
+        }
+    }
 
     def parse(self, response):
 

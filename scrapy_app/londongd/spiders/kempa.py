@@ -1,14 +1,21 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from londongd.items import KempaCatItem
+from londongd.items import kempaStoreItem
 from scrapy.loader import ItemLoader
 
 class KempaSpider(scrapy.Spider):
     name = "kempa"
     allowed_domains = ["kempa-sports.com"]
     main_domain_prod = "http://www.kempa-sports.com"
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'londongd.pipelines.KempaPipeline':100
+        }
+    }
     start_urls = []
-    catItems = []
+    storeItems = []
+
 
     def __init__(self, filename=None):
         if filename:
@@ -20,50 +27,44 @@ class KempaSpider(scrapy.Spider):
 
     def parse(self, response):
 
-        itemCat = KempaCatItem()
-
-        #GET CATEGORY TITLE
-        itemCat['catTitle']  = response.css('h1::text').extract_first()
-
 
         #GET CATEGORY URL
-        itemCat['catUrl'] = response.url
+        catUrl= response.url
 
         #GET CATEGORY SLUG
-        itemCat['catSlug'] = itemCat['catUrl'].rsplit('/', 1)[-1]
+        catSlug = catUrl.rsplit('/', 1)[-1]
 
 
         #GET CATEGORY ID
-        itemCat['catId'] = itemCat['catUrl'].rsplit('/', 2)[-2]
+        catid = catUrl.rsplit('/', 2)[-2]
 
         for link in response.css('ul#productlist li'):
             catHref = link.css('a::attr(href)').extract_first()
 
             #Get items
-            #yield scrapy.Request(self.main_domain_prod + catHref,meta={'catid': catId, 'catslug':catSlug},callback=self.parse_item)
-
-        self.catItems.append(itemCat)
-        return itemCat
+            yield scrapy.Request(self.main_domain_prod + catHref,meta={'catid': catid, 'catslug':catSlug},callback=self.parse_itemstore)
 
 
-    def parse_item(self, response):
+
+    def parse_itemstore(self, response):
+
+        itemStore = kempaStoreItem()
 
         #GET CAT ID FOR ARTICLE
-        itemCatid = response.meta['catid']
+        itemStore['itemCatid'] = response.meta['catid']
 
         #GET CAT SLUG FOR ARTICLE
-        itemCatslug = response.meta['catslug']
-        print itemCatslug
+        itemStore['itemCatslug'] = response.meta['catslug']
 
         #GET ARTICLE TITLE
-        itemTitle = response.css('h1[itemprop="name"]::text').extract_first()
+        itemStore['itemTitle'] = response.css('h1[itemprop="name"]::text').extract_first()
         
         #GET ITEM URL
-        itemURL = response.url
+        itemStore['itemURL'] = response.url
 
         #GET ARTICLE ID
         itemId = response.css('h2[itemprop="identifier"]::text').extract_first()
-        itemId = itemId.replace('Art. ', '')
+        itemStore['itemId']  = itemId.replace('Art. ', '')
 
         # GET IMAGES
         itemImages = []
@@ -74,8 +75,9 @@ class KempaSpider(scrapy.Spider):
                 itemImages.append(itemImage)
         
 
+        itemStore['itemImages'] = itemImages
         #GET ARTICLE DESCRIPTION
-        itemAllDescription = response.css('.grid_6').extract_first()
+        itemStore['itemAllDescription']  = response.css('.grid_6').extract_first()
 
 
         #GET ARTICLE INFO
@@ -84,11 +86,14 @@ class KempaSpider(scrapy.Spider):
             valInfo = info.css('div.infoc').extract_first()
 
             if(labelInfo == 'Colors'):
-                itemInfoColors = valInfo
+                itemStore['itemInfoColors'] = valInfo
             if(labelInfo == 'Technology'):
-                itemInfoTechnology = valInfo
+                itemStore['itemInfoTechnology'] = valInfo
             if(labelInfo == 'Sizes'):
-                itemInfoSizes = valInfo
+                itemStore['itemInfoSizes'] = valInfo
             if(labelInfo == 'Available until'):
-                itemInfoAvUntil = valInfo
+                itemStore['itemInfoAvUntil'] = valInfo
+
+        self.storeItems.append(itemStore)
+        return itemStore
         

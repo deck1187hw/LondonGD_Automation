@@ -64,4 +64,29 @@ class KempaCatItem(scrapy.Item):
 	project = Field()
 	spider = Field()
 	server = Field()
-	date = Field()		
+	date = Field()	
+
+class kempaStoreItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	itemCatid = Field()
+	itemCatslug = Field()
+	itemTitle = Field()
+	itemURL = Field()
+	itemId = Field()
+	itemAllDescription = Field()
+	itemInfoColors = Field()
+	itemInfoTechnology = Field()
+	itemInfoSizes = Field()
+	itemInfoAvUntil = Field()
+	itemImages = Field()
+	
+	
+	# Housekeeping fields
+	url = Field()
+	project = Field()
+	spider = Field()
+	server = Field()
+	date = Field()			
