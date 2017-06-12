@@ -12,7 +12,7 @@ from scrapy.exceptions import DropItem
 from scrapy import log
 
 
-class LondongdPipelineMongodb(object):
+class EhfmatchPipeline(object):
 
     def __init__(self):
         connection = pymongo.MongoClient(
@@ -20,8 +20,8 @@ class LondongdPipelineMongodb(object):
             settings['MONGODB_PORT']
         )
         db = connection[settings['MONGODB_DB']]
-        db[settings['MONGODB_COLLECTION']].delete_many({})
-        self.collection = db[settings['MONGODB_COLLECTION']]
+        db[settings['MONGODB_EHFMATCHES_COLLECTION']].delete_many({})
+        self.collection = db[settings['MONGODB_EHFMATCHES_COLLECTION']]
 
 
     def process_item(self, item, spider):
@@ -32,6 +32,32 @@ class LondongdPipelineMongodb(object):
                 raise DropItem("Missing {0}!".format(data))
         if valid:
             self.collection.insert(dict(item))
-            log.msg("Question added to MongoDB database!",
+            log.msg("Added to MongoDB database!",
                     level=log.DEBUG, spider=spider)
         return item
+
+
+class KempaPipeline(object):
+
+    def __init__(self):
+        connection = pymongo.MongoClient(
+            settings['MONGODB_SERVER'],
+            settings['MONGODB_PORT']
+        )
+        print "PIPELINE!!.----------------------------_"
+        db = connection[settings['MONGODB_DB']]
+        db[settings['KEMPA_COLLECTION']].delete_many({})
+        self.collection = db[settings['KEMPA_COLLECTION']]
+
+
+    def process_item(self, item, spider):
+        valid = True
+        for data in item:
+            if not data:
+                valid = False
+                raise DropItem("Missing {0}!".format(data))
+        if valid:
+            self.collection.insert(dict(item))
+            log.msg("Added to MongoDB database!",
+                    level=log.DEBUG, spider=spider)
+        return item  

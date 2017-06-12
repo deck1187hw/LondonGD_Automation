@@ -64,15 +64,17 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'londongd.pipelines.LondongdPipelineMongodb': 300
+
+ITEM_PIPELINES = { # declare the handle sequence
+    'londongd.pipelines.EhfmatchPipeline':100,
+    'londongd.pipelines.KempaPipeline':200,
 }
 
 MONGODB_SERVER = "178.62.27.154"
 MONGODB_PORT = 27017
 MONGODB_DB = "londongd"
-MONGODB_COLLECTION = "ehfmatches"
-
+MONGODB_EHFMATCHES_COLLECTION = "ehfmatches"
+KEMPA_COLLECTION = "kempa_cats"
 
 
 
