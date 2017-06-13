@@ -101,6 +101,7 @@ class KempaSpider(scrapy.Spider):
                 itemStore['itemInfoTechnology'] = imagesTmp
 
             if(labelInfo == 'Sizes'):
+            	valInfo = info.css('div.infoc .sizeprice::text').extract_first()
                 itemStore['itemInfoSizes'] = valInfo
             if(labelInfo == 'Available until'):
                 itemStore['itemInfoAvUntil'] = valInfo
