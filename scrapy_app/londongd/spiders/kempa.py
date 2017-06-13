@@ -3,6 +3,7 @@ import scrapy
 from londongd.items import KempaCatItem
 from londongd.items import kempaStoreItem
 from scrapy.loader import ItemLoader
+from scrapy.selector import HtmlXPathSelector
 
 class KempaSpider(scrapy.Spider):
     name = "kempa"
@@ -72,7 +73,8 @@ class KempaSpider(scrapy.Spider):
         for itemImage in imagesTmp:
             if itemImage != '/content/images/spinner.gif':
                 itemImage = itemImage.replace('ProductThumb', 'product')
-                itemImages.append(itemImage)
+                if itemImage not in itemImages:                    
+                    itemImages.append(itemImage)
         
 
         itemStore['itemImages'] = itemImages
@@ -83,12 +85,21 @@ class KempaSpider(scrapy.Spider):
         #GET ARTICLE INFO
         for info in response.css('div.info'):
             labelInfo = info.css('label::text').extract_first()
-            valInfo = info.css('div.infoc').extract_first()
+            valInfo = info.css('div.infoc::text').extract_first()
+            valInfoHtml = info.css('div.infoc').extract_first()
 
             if(labelInfo == 'Colors'):
                 itemStore['itemInfoColors'] = valInfo
             if(labelInfo == 'Technology'):
-                itemStore['itemInfoTechnology'] = valInfo
+                itemImages = []
+                imagesTmp = info.css('div.infoc img').xpath('@src').extract()
+                for itemImage in imagesTmp:
+                    if itemImage not in itemImages:                    
+                        itemImages.append(itemImage)
+                print "IMAGES_----------------------------"
+                print imagesTmp
+                itemStore['itemInfoTechnology'] = imagesTmp
+
             if(labelInfo == 'Sizes'):
                 itemStore['itemInfoSizes'] = valInfo
             if(labelInfo == 'Available until'):
