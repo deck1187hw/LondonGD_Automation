@@ -10,7 +10,7 @@ class EhfmatchesSpider(scrapy.Spider):
     start_urls = ['http://www.ehftv.com/gb/livestream-calendar']
     custom_settings = {
         'ITEM_PIPELINES': {
-            'londongd.pipelines.KempaPipeline':100
+            'londongd.pipelines.EhfmatchPipeline':100
         }
     }
 
