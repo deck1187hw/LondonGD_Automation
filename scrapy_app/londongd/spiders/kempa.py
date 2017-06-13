@@ -104,6 +104,9 @@ class KempaSpider(scrapy.Spider):
                 itemStore['itemInfoSizes'] = valInfo
             if(labelInfo == 'Available until'):
                 itemStore['itemInfoAvUntil'] = valInfo
+                
+            if(labelInfo == 'Available'):
+                itemStore['itemInfoAvFrom'] = valInfo
 
         self.storeItems.append(itemStore)
         return itemStore
