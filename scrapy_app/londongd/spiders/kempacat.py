@@ -30,7 +30,10 @@ class KempacatSpider(scrapy.Spider):
 
         #GET CATEGORY TITLE
         itemCat['catTitle']  = response.css('h1::text').extract_first()
-
+        
+        #GET CATEGORY Image 
+        itemImage = response.css('ul#productlist li img').xpath('@src').extract_first()
+        itemCat['catImage'] = itemImage.replace('productthumb', 'product')
 
         #GET CATEGORY URL
         itemCat['catUrl'] = response.url

@@ -58,6 +58,7 @@ class KempaCatItem(scrapy.Item):
 	catImage = Field()
 	catUrl = Field()
 	catId = Field()
+	catImage = Field()
 	
 	# Housekeeping fields
 	url = Field()
