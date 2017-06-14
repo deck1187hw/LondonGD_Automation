@@ -83,6 +83,8 @@ class kempaStoreItem(scrapy.Item):
 	itemInfoSizes = Field()
 	itemInfoAvUntil = Field()
 	itemImages = Field()
+	itemInfoAvFrom = Field()
+	itemDescription1 = Field()
 	
 	
 	# Housekeeping fields

@@ -3,6 +3,8 @@ import scrapy
 from londongd.items import KempaCatItem
 from londongd.items import kempaStoreItem
 from scrapy.loader import ItemLoader
+import datetime
+import socket
 
 class KempacatSpider(scrapy.Spider):
     name = "kempacat"
@@ -43,6 +45,14 @@ class KempacatSpider(scrapy.Spider):
 
         #GET CATEGORY ID
         itemCat['catId'] = itemCat['catUrl'].rsplit('/', 2)[-2]
+        
+        
+        itemCat['url'] = response.url
+        itemCat['project'] = self.settings.get('BOT_NAME')
+        itemCat['spider'] = self.name
+        itemCat['server'] = socket.gethostname()
+        itemCat['date'] = datetime.datetime.now()
 
         self.catItems.append(itemCat)
         return itemCat
+        

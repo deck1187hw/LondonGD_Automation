@@ -2,7 +2,6 @@ http://www.kempa-sports.com/en/products/category/101/team-shirts
 http://www.kempa-sports.com/en/products/category/734/outerwear
 http://www.kempa-sports.com/en/products/category/100/handballs
 http://www.kempa-sports.com/en/products/category/110/shoes
-http://www.kempa-sports.com/en/products/category/101/team-shirts
 http://www.kempa-sports.com/en/products/category/102/shorts
 http://www.kempa-sports.com/en/products/category/725/pants
 http://www.kempa-sports.com/en/products/category/712/shirts

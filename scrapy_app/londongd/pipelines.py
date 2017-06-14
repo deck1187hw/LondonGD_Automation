@@ -47,7 +47,7 @@ class KempaPipeline(object):
             settings['MONGODB_PORT']
         )
         db = connection[settings['MONGODB_DB']]
-        db[settings['KEMPA_COLLECTION_ITEMS']].delete_many({})
+        #db[settings['KEMPA_COLLECTION_ITEMS']].delete_many({})
         self.collection = db[settings['KEMPA_COLLECTION_ITEMS']]
 
 
@@ -59,12 +59,11 @@ class KempaPipeline(object):
                 valid = False
                 raise DropItem("Missing {0}!".format(data))
         if valid:
-            self.collection.insert(dict(item))
-            log.msg("Added to MongoDB database!",
-                    level=log.DEBUG, spider=spider)
+        	self.collection.update({'itemId':item['itemId']},dict(item), upsert= True)
+        	log.msg("Added to MongoDB database!",level=log.DEBUG, spider=spider)
         return item  
 
-#for the items
+#for the categories
 class KempacatPipeline(object):
 
     def __init__(self):
@@ -74,19 +73,20 @@ class KempacatPipeline(object):
             settings['MONGODB_PORT']
         )
         db = connection[settings['MONGODB_DB']]
-        db[settings['KEMPA_COLLECTION_CATS']].delete_many({})
+        #db[settings['KEMPA_COLLECTION_CATS']].delete_many({})
         self.collection = db[settings['KEMPA_COLLECTION_CATS']]
 
 
 
     def process_item(self, item, spider):
         valid = True
+
         for data in item:
             if not data:
                 valid = False
                 raise DropItem("Missing {0}!".format(data))
         if valid:
-            self.collection.insert(dict(item))
-            log.msg("Added to MongoDB database!",
-                    level=log.DEBUG, spider=spider)
+        	self.collection.update({'catId':item['catId']},dict(item), upsert= True)
+        	log.msg("Added to MongoDB database!",level=log.DEBUG, spider=spider)
+            
         return item          

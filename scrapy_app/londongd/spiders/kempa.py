@@ -80,6 +80,10 @@ class KempaSpider(scrapy.Spider):
         itemStore['itemImages'] = itemImages
         #GET ARTICLE DESCRIPTION
         itemStore['itemAllDescription']  = response.css('.grid_6').extract_first()
+        
+        
+        #GET ARTICLE DESCRIPTION
+        itemStore['itemDescription1']  = response.css('ul.material').extract_first()
 
 
         #GET ARTICLE INFO
@@ -101,8 +105,12 @@ class KempaSpider(scrapy.Spider):
                 itemStore['itemInfoTechnology'] = imagesTmp
 
             if(labelInfo == 'Sizes'):
-            	valInfo = info.css('div.infoc .sizeprice::text').extract_first()
-                itemStore['itemInfoSizes'] = valInfo
+            	vals = []
+            	valInfo = info.css('div.infoc .sizeprice::text').extract()
+            	for val in valInfo:
+            		vals.append(val)
+                itemStore['itemInfoSizes'] = vals
+                
             if(labelInfo == 'Available until'):
                 itemStore['itemInfoAvUntil'] = valInfo
                 
