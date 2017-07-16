@@ -49,3 +49,12 @@ $ mongo --port 27017
 # Usage: mongo --port <port you get from `docker ps`>  --host <ip address from `docker-machine ip VM_NAME`>
 $ mongo --port 27017 --host 192.168.59.103
 ```
+If Docker goes down:
+```
+docker start mongo_instance_001
+```
+
+### Backup MongoDB
+```
+docker run -d -v /var/www/gd_backups/mongodb:/backup -e 'CRON_SCHEDULE=*/5 * * * *' --link mongo_instance_001 --name docker_backup istepanov/mongodump
+```
