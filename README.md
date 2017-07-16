@@ -56,5 +56,5 @@ docker start mongo_instance_001
 
 ### Backup MongoDB
 ```
-docker run -d -v /var/www/gd_backups/mongodb:/backup -e 'CRON_SCHEDULE=*/5 * * * *' --link mongo_instance_001:mongo --name docker_backup2 istepanov/mongodump
+docker run -d -v /var/www/gd_backups/mongodb:/backup -e 'CRON_SCHEDULE=0 1 * * *' --link mongo_instance_001:mongo --name docker_backup istepanov/mongodump
 ```
