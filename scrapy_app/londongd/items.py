@@ -92,4 +92,23 @@ class kempaStoreItem(scrapy.Item):
 	project = Field()
 	spider = Field()
 	server = Field()
-	date = Field()			
+	date = Field()
+	
+class salmingStoreItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	itemDescription = Field()
+	itemUrl = Field()
+	itemData = Field()
+	itemImages = Field()
+	
+	
+	# Housekeeping fields
+	url = Field()
+	project = Field()
+	spider = Field()
+	server = Field()
+	date = Field()	
+		

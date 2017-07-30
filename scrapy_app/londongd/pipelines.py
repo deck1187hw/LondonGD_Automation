@@ -6,10 +6,12 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import pymongo
+import MySQLdb
 
 from scrapy.conf import settings
 from scrapy.exceptions import DropItem
 from scrapy import log
+
 
 
 class EhfmatchPipeline(object):
@@ -62,6 +64,35 @@ class KempaPipeline(object):
         	self.collection.update({'itemId':item['itemId']},dict(item), upsert= True)
         	log.msg("Added to MongoDB database!",level=log.DEBUG, spider=spider)
         return item  
+        
+        
+        
+        
+#for salming  items
+class SalmingPipeline(object):
+
+    def __init__(self):
+        self.conn = MySQLdb.connect(
+            user=settings['MYSQL_USER'],
+            passwd=settings['MYSQL_PASSWORD'],
+            db=settings['MYSQL_DB'],
+            host='localhost',
+            charset="utf8",
+            use_unicode=True
+        )
+        self.cursor = self.conn.cursor()
+
+
+
+    def process_item(self, item, spider):
+	    
+        try:
+            self.cursor.execute("""UPDATE dwxf_store_products_salming SET description=%s, product_data=%s, images=%s WHERE url_salming=%s""", (item['itemDescription'], item['itemData'], item['itemImages'], item['itemUrl']))
+            self.conn.commit()
+        except MySQLdb.Error, e:
+            print "Error %d: %s" % (e.args[0], e.args[1])
+
+            return item    
 
 #for the categories
 class KempacatPipeline(object):
