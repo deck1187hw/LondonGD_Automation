@@ -51,4 +51,5 @@ class SalmingSpider(scrapy.Spider):
 		itemStore['itemImages'] = itemImages
 		
 
+		
 		return itemStore
