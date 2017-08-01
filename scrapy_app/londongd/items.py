@@ -103,6 +103,9 @@ class salmingStoreItem(scrapy.Item):
 	itemUrl = Field()
 	itemData = Field()
 	itemImages = Field()
+	itemSizes = Field()
+	itemImagemarketing = Field()
+	itemTech = Field()
 	
 	
 	# Housekeeping fields

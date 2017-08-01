@@ -5,8 +5,13 @@ from londongd.items import salmingStoreItem
 from scrapy.loader import ItemLoader
 from scrapy.selector import HtmlXPathSelector
 import MySQLdb
+import json
 
-
+class SizesClass(object):
+    def __init__(self, sizeVal, sizeName ):
+        self.sizeVal = sizeVal
+        self.sizeName = sizeName
+        
 class SalmingSpider(scrapy.Spider):
     name = "salming"
     allowed_domains = ["salming.com"]
@@ -40,16 +45,49 @@ class SalmingSpider(scrapy.Spider):
 		
 		itemStore = salmingStoreItem()
 		itemStore['itemUrl'] = response.url
+		
 		#GET ITEM DESCRIPTION
 		itemDescription = response.css('.uc-product-description').extract_first()
 		itemStore['itemDescription'] = itemDescription
 		
+		#GET ITEM PRODUCT DATA
 		itemData = response.css('.product-data').extract_first()
 		itemStore['itemData'] = itemData
 		
-		itemImages = response.css('.additional-images ul.bzoom a::attr(href)').extract()
-		itemStore['itemImages'] = itemImages
 		
+		#GET ITEM IMAGES
+		itemImages = []
+		itemImagesTmp = response.css('.additional-images ul.bzoom a::attr(href)').extract()
+		for itemImage in itemImagesTmp:
+			itemImages.append(itemImage)
 
+		
+		itemImages = ','.join(map(str, itemImages))
+		itemStore['itemImages'] = itemImages
+
+		
+		sizesAll = []
+		sizesTmp = response.css('.size-sku select#variant-sku option::text').extract()
+		sizesTmpValue = response.css('.size-sku select#variant-sku option::attr(value)').extract()
+		
+		i = 0
+		for sizeVal in sizesTmpValue:
+			ob1 = sizeVal+'||'+sizesTmp[i]		
+			sizesAll.append(ob1)
+
+			i = i +1		
+		
+		
+		itemStore['itemSizes'] = ','.join(map(str, sizesAll))
+
+
+		
+		#IMAGE MARKETING
+		itemImagemarketing = response.css('.family-header img::attr(src)').extract_first()
+		itemStore['itemImagemarketing'] = itemImagemarketing
+		
+		#TECH CONTAINER
+		itemTech = response.css('.tech-container').extract_first()
+		itemStore['itemTech'] = itemTech
 		
 		return itemStore

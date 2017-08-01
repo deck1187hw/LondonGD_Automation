@@ -87,7 +87,7 @@ class SalmingPipeline(object):
     def process_item(self, item, spider):
 	    
         try:
-            self.cursor.execute("""UPDATE dwxf_store_products_salming SET description=%s, product_data=%s, images=%s WHERE url_salming=%s""", (item['itemDescription'], item['itemData'], item['itemImages'], item['itemUrl']))
+            self.cursor.execute("""UPDATE dwxf_store_products_salming SET description=%s, product_data=%s, images=%s,sizes=%s,image_marketing=%s,techinfo=%s WHERE url_salming=%s""", (item['itemDescription'], item['itemData'], item['itemImages'], item['itemSizes'],item['itemImagemarketing'],item['itemTech'], item['itemUrl']))
             self.conn.commit()
         except MySQLdb.Error, e:
             print "Error %d: %s" % (e.args[0], e.args[1])
