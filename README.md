@@ -53,6 +53,10 @@ If Docker goes down:
 ```
 docker start mongo_instance_001
 ```
+Access the Mongo Shell
+```
+docker exec -it mongo_instance_001 /bin/bash
+```
 
 ### Backup MongoDB
 ```
