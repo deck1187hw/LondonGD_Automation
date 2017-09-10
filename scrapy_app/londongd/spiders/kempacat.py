@@ -3,6 +3,7 @@ import scrapy
 from londongd.items import KempaCatItem
 from londongd.items import kempaStoreItem
 from scrapy.loader import ItemLoader
+import logging
 import datetime
 import socket
 
@@ -17,13 +18,15 @@ class KempacatSpider(scrapy.Spider):
     }
     start_urls = []
     catItems = []
-
+    
+	
     def __init__(self, filename=None):
-        if filename:
-            with open(filename, 'r') as f:
-                for line in f.readlines():
-                    self.start_urls.append(line.strip());
-            f.close()
+	    logging.getLogger('scrapy').setLevel(logging.ERROR)
+	    if filename:
+			with open(filename, 'r') as f:
+				for line in f.readlines():
+					self.start_urls.append(line.strip());
+			f.close()
 
 
     def parse(self, response):

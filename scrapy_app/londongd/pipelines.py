@@ -17,7 +17,7 @@ from scrapy import log
 class EhfmatchPipeline(object):
 
     def __init__(self):
-        print "EHF MATCHES PIPELINE---------------------------------------"
+        #print "EHF MATCHES PIPELINE---------------------------------------"
         connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
@@ -43,7 +43,7 @@ class EhfmatchPipeline(object):
 class KempaPipeline(object):
 
     def __init__(self):
-        print "KEMPA ITEM PIPELINE---------------------------------------"
+        #print "KEMPA ITEM PIPELINE---------------------------------------"
         connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
@@ -98,7 +98,7 @@ class SalmingPipeline(object):
 class KempacatPipeline(object):
 
     def __init__(self):
-        print "KEMPA CAT PIPELINE---------------------------------------"
+        #print "KEMPA CAT PIPELINE---------------------------------------"
         connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']

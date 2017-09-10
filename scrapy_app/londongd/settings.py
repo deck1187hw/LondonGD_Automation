@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = False
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 
 
-MONGODB_SERVER = "178.62.27.154"
+MONGODB_SERVER = "127.0.0.1"
 MONGODB_PORT = 27017
 MONGODB_DB = "londongd"
 MONGODB_EHFMATCHES_COLLECTION = "ehfmatches"
