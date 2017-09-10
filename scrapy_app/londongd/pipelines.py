@@ -94,6 +94,35 @@ class SalmingPipeline(object):
 
             return item    
 
+
+
+#for salming  items
+class EhamatchesPipeline(object):
+
+    def __init__(self):
+        self.conn = MySQLdb.connect(
+            user=settings['MYSQL_USER'],
+            passwd=settings['MYSQL_PASSWORD'],
+            db=settings['MYSQL_DB'],
+            host='localhost',
+            charset="utf8",
+            use_unicode=True
+        )
+        
+        self.cursor = self.conn.cursor()
+        self.cursor.execute("""TRUNCATE TABLE dwxf_eha_matches""")
+        self.conn.commit()
+        
+        
+
+    def process_item(self, item, spider):
+		try:
+			self.cursor.execute("""INSERT dwxf_eha_matches SET type=%s, home_team=%s, away_team=%s, date=%s, venue=%s,isgd=%s """, (item['itemType'], item['itemHome'], item['itemAway'], item['itemDate'], item['itemVenue'],item['itemIsGD']))
+			self.conn.commit()
+		except MySQLdb.Error, e:
+			print "Error %d: %s" % (e.args[0], e.args[1])
+		return item 
+
 #for the categories
 class KempacatPipeline(object):
 

@@ -80,7 +80,6 @@ class SalmingSpider(scrapy.Spider):
 		
 		itemStore['itemSizes'] = ','.join(map(str, sizesAll))
 
-
 		
 		#IMAGE MARKETING
 		itemImagemarketing = response.css('.family-header img::attr(src)').extract_first()

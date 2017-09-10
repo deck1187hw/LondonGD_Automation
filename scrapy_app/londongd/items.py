@@ -113,5 +113,24 @@ class salmingStoreItem(scrapy.Item):
 	project = Field()
 	spider = Field()
 	server = Field()
-	date = Field()	
+	date = Field()
+	
+class ehamatchesItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	itemType = Field()
+	itemHome = Field()
+	itemAway = Field()
+	itemDate = Field()
+	itemIsGD = Field()
+	itemVenue = Field()
+	
+	# Housekeeping fields
+	url = Field()
+	project = Field()
+	spider = Field()
+	server = Field()
+	date = Field()		
 		
