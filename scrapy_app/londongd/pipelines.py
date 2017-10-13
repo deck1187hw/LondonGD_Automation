@@ -95,6 +95,33 @@ class SalmingPipeline(object):
             return item    
 
 
+class StockPipeline(object):
+
+    def __init__(self):
+        self.conn = MySQLdb.connect(
+            user=settings['MYSQL_USER'],
+            passwd=settings['MYSQL_PASSWORD'],
+            db=settings['MYSQL_DB'],
+            host='localhost',
+            charset="utf8",
+            use_unicode=True
+        )
+        self.cursor = self.conn.cursor()
+        self.cursor.execute("""TRUNCATE TABLE dwxf_store_products_stock""")
+        self.conn.commit()
+
+
+
+    def process_item(self, item, spider):
+		try:
+			self.cursor.execute("""INSERT dwxf_store_products_stock SET kempa_id=%s, sizes=%s,available=%s,light=%s, title=%s""", (item['id'], item['sizes'],item['available'],item['light'], item['title']))
+			self.conn.commit()
+			print "LOADING ITEM IN PIPELINE!---------------------"
+		except MySQLdb.Error, e:
+			print "Error %d: %s" % (e.args[0], e.args[1])
+		return item    
+
+
 
 #for salming  items
 class EhamatchesPipeline(object):

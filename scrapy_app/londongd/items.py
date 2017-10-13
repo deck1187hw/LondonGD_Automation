@@ -46,6 +46,18 @@ class EhfmatchItem(scrapy.Item):
 	spider = Field()
 	server = Field()
 	date = Field()	
+	
+	
+class StockItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	title = Field()
+	id = Field()
+	sizes = Field()	
+	available = Field()	
+	light = Field()		
 
 
 class KempaCatItem(scrapy.Item):
