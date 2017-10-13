@@ -26,7 +26,7 @@ class EhamatchesSpider(scrapy.Spider):
     teamsItem = []		
 	
     def __init__(self, filename=None):
-		print "hola"
+		print "reading EHA matches"
 	
 
 	
