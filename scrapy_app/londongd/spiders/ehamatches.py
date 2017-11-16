@@ -6,6 +6,7 @@ from londongd.items import ehamatchesItem
 from scrapy.loader import ItemLoader
 from scrapy.selector import HtmlXPathSelector
 import MySQLdb
+from scrapy.conf import settings
 import json
 
         
@@ -13,7 +14,7 @@ class EhamatchesSpider(scrapy.Spider):
     name = "ehamatches"
     allowed_domains = ["englandhandball.com"]
     main_domain_prod = "http://www.englandhandball.com"
-    db = MySQLdb.connect(host="localhost",user="londongd",passwd="@Callthelaw77",db="londongd_j3")
+    db = MySQLdb.connect(host="localhost",user=settings.get('MYSQL_USER'),passwd=settings.get('MYSQL_PASSWORD'),db=settings.get('MYSQL_DB'))
     custom_settings = {
         'ITEM_PIPELINES': {
             'londongd.pipelines.EhamatchesPipeline':100

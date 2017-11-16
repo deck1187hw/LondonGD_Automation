@@ -4,6 +4,7 @@ from londongd.items import KempaCatItem
 from londongd.items import kempaStoreItem
 from scrapy.loader import ItemLoader
 from scrapy.selector import HtmlXPathSelector
+from scrapy.conf import settings
 
 class KempaSpider(scrapy.Spider):
     name = "kempa"

@@ -5,6 +5,7 @@ from londongd.items import salmingStoreItem
 from scrapy.loader import ItemLoader
 from scrapy.selector import HtmlXPathSelector
 import MySQLdb
+from scrapy.conf import settings
 import json
 
 class SizesClass(object):
@@ -16,7 +17,7 @@ class SalmingSpider(scrapy.Spider):
     name = "salming"
     allowed_domains = ["salming.com"]
     main_domain_prod = "https://www.salming.com"
-    db = MySQLdb.connect(host="localhost",user="londongd",passwd="@Callthelaw77",db="londongd_j3")
+    db = MySQLdb.connect(host="localhost",user=settings.get('MYSQL_USER'),passwd=settings.get('MYSQL_PASSWORD'),db=settings.get('MYSQL_DB'))
     custom_settings = {
         'ITEM_PIPELINES': {
             'londongd.pipelines.SalmingPipeline':100

@@ -74,9 +74,9 @@ KEMPA_COLLECTION_CATS = "KEMPA_CATEGORIES"
 KEMPA_COLLECTION_ITEMS = "KEMPA_ITEMS"
 
 
-MYSQL_USER = 'londongd'
-MYSQL_PASSWORD = '@Callthelaw77'
-MYSQL_DB = 'londongd_j3'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'Callthelaw77'
+MYSQL_DB = 'londongd'
 
 
 # Enable and configure the AutoThrottle extension (disabled by default)

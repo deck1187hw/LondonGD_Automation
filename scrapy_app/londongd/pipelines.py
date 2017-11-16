@@ -107,14 +107,17 @@ class StockPipeline(object):
             use_unicode=True
         )
         self.cursor = self.conn.cursor()
-        self.cursor.execute("""TRUNCATE TABLE dwxf_store_products_stock""")
-        self.conn.commit()
+        #self.cursor.execute("""TRUNCATE TABLE dwxf_store_products_stock""")
+        #self.conn.commit()
 
 
 
     def process_item(self, item, spider):
 		try:
-			self.cursor.execute("""INSERT dwxf_store_products_stock SET kempa_id=%s, sizes=%s,available=%s,light=%s, title=%s""", (item['id'], item['sizes'],item['available'],item['light'], item['title']))
+						
+			self.cursor.execute("""REPLACE INTO dwxf_store_products_stock (kempa_id,sizes,available,light,title,stock) VALUES (%s,%s,%s,%s,%s,%s)""", (item['id'], item['sizes'],item['available'],item['light'], item['title'], item['stock']))
+			
+			
 			self.conn.commit()
 			print "LOADING ITEM IN PIPELINE!---------------------"
 		except MySQLdb.Error, e:

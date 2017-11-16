@@ -57,6 +57,7 @@ class StockItem(scrapy.Item):
 	id = Field()
 	sizes = Field()	
 	available = Field()	
+	stock = Field()	
 	light = Field()		
 
 
