@@ -82,8 +82,6 @@ class SalmingPipeline(object):
         )
         self.cursor = self.conn.cursor()
 
-
-
     def process_item(self, item, spider):
 	    
         try:
@@ -152,6 +150,37 @@ class EhamatchesPipeline(object):
 		except MySQLdb.Error, e:
 			print "Error %d: %s" % (e.args[0], e.args[1])
 		return item 
+		
+		
+#for salming  items
+class SporteasyPipeline(object):
+
+    def __init__(self):
+        self.conn = MySQLdb.connect(
+            user=settings['MYSQL_USER'],
+            passwd=settings['MYSQL_PASSWORD'],
+            db=settings['MYSQL_DB'],
+            host='localhost',
+            charset="utf8",
+            use_unicode=True
+        )
+        
+        self.cursor = self.conn.cursor()
+        self.cursor.execute("""TRUNCATE TABLE dwxf_londongd_events_sporteasy""")
+        self.conn.commit()
+        
+        
+
+    def process_item(self, item, spider):
+	    print "ITEM--------------"
+	    print item
+	    try:
+	    	self.cursor.execute("""INSERT dwxf_londongd_events_sporteasy SET eventId=%s, date=%s, type=%s, team=%s, location=%s,locationLink=%s,name=%s """, (item['itemEventid'], item['itemDate'], item['itemType'], item['itemTeam'], item['itemLocation'],item['itemLocationLink'],item['itemName']))
+	    	self.conn.commit()
+	    except MySQLdb.Error, e:
+	    	print "Error %d: %s" % (e.args[0], e.args[1])
+		return item 
+
 
 #for the categories
 class KempacatPipeline(object):

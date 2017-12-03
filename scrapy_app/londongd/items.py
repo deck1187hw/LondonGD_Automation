@@ -145,5 +145,27 @@ class ehamatchesItem(scrapy.Item):
 	project = Field()
 	spider = Field()
 	server = Field()
-	date = Field()		
+	date = Field()	
+	
+class SporteasyItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	itemEventid = Field()
+	itemDate = Field()
+	itemName = Field()
+	itemType = Field()
+	itemAttendees = Field()
+	itemLocation = Field()
+	itemLocationLink = Field()
+	itemTeam = Field()
+	
+	
+	# Housekeeping fields
+	url = Field()
+	project = Field()
+	spider = Field()
+	server = Field()
+	date = Field()			
 		
