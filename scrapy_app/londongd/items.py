@@ -160,6 +160,7 @@ class SporteasyItem(scrapy.Item):
 	itemLocation = Field()
 	itemLocationLink = Field()
 	itemTeam = Field()
+	itemLinkEvent = Field()
 	
 	
 	# Housekeeping fields

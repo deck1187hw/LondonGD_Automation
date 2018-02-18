@@ -175,7 +175,7 @@ class SporteasyPipeline(object):
 	    print "ITEM--------------"
 	    print item
 	    try:
-	    	self.cursor.execute("""INSERT dwxf_londongd_events_sporteasy SET eventId=%s, date=%s, type=%s, team=%s, location=%s,locationLink=%s,name=%s """, (item['itemEventid'], item['itemDate'], item['itemType'], item['itemTeam'], item['itemLocation'],item['itemLocationLink'],item['itemName']))
+	    	self.cursor.execute("""INSERT dwxf_londongd_events_sporteasy SET eventId=%s, date=%s, type=%s, team=%s, location=%s,locationLink=%s,name=%s, attendees=%s, linkevent=%s """, (item['itemEventid'], item['itemDate'], item['itemType'], item['itemTeam'], item['itemLocation'],item['itemLocationLink'],item['itemName'],item['itemAttendees'],item['itemLinkEvent']))
 	    	self.conn.commit()
 	    except MySQLdb.Error, e:
 	    	print "Error %d: %s" % (e.args[0], e.args[1])

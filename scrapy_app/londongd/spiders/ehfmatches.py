@@ -7,7 +7,7 @@ from scrapy.loader import ItemLoader
 
 class EhfmatchesSpider(scrapy.Spider):
     name = 'ehfmatches'
-    start_urls = ['http://www.ehftv.com/gb/livestream-calendar']
+    start_urls = ['http://www.ehftv.com/gb/livestream-schedule']
     custom_settings = {
         'ITEM_PIPELINES': {
             'londongd.pipelines.EhfmatchPipeline':100
