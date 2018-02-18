@@ -8,7 +8,7 @@ from scrapy.selector import HtmlXPathSelector
 import MySQLdb
 from scrapy.conf import settings
 import json
-
+import logging
         
 class EhamatchesSpider(scrapy.Spider):
     name = "ehamatches"
@@ -27,14 +27,14 @@ class EhamatchesSpider(scrapy.Spider):
     teamsItem = []		
 	
     def __init__(self, filename=None):
-		print "reading EHA matches"
+		logging.info("-- Reading EHA matches --")
 	
 
 	
     def parse(self, response):
 	    
 	    leagueName = response.css('div.page-title div.container h1::text').extract_first()
-	    print leagueName
+	    logging.log(logging.INFO, "Parsing: "+leagueName)
 	    
 	    if "Regional League South East Tier 1 - women" in leagueName:
 	    	gamesLi = response.css('div.female .carousel-container ul li')

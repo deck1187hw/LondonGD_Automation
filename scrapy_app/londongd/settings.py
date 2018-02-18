@@ -14,12 +14,15 @@ BOT_NAME = 'londongd'
 SPIDER_MODULES = ['londongd.spiders']
 NEWSPIDER_MODULE = 'londongd.spiders'
 
-
+DOWNLOAD_HANDLERS = {'s3': None,}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'londongd (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
+
+LOG_FILE = '/var/log/scrapy/londongd.log'
+LOG_LEVEL = 'ERROR'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

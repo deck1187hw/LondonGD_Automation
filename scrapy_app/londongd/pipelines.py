@@ -7,10 +7,10 @@
 
 import pymongo
 import MySQLdb
+import logging
 
 from scrapy.conf import settings
 from scrapy.exceptions import DropItem
-from scrapy import log
 
 
 
@@ -35,7 +35,7 @@ class EhfmatchPipeline(object):
                 raise DropItem("Missing {0}!".format(data))
         if valid:
             self.collection.insert(dict(item))
-            log.msg("Added to MongoDB database!",
+            logging.log("Added to MongoDB database!",
                     level=log.DEBUG, spider=spider)
         return item
 
@@ -62,7 +62,7 @@ class KempaPipeline(object):
                 raise DropItem("Missing {0}!".format(data))
         if valid:
         	self.collection.update({'itemId':item['itemId']},dict(item), upsert= True)
-        	log.msg("Added to MongoDB database!",level=log.DEBUG, spider=spider)
+        	logging.log("Added to MongoDB database!",level=log.DEBUG, spider=spider)
         return item  
         
         
@@ -206,6 +206,6 @@ class KempacatPipeline(object):
                 raise DropItem("Missing {0}!".format(data))
         if valid:
         	self.collection.update({'catId':item['catId']},dict(item), upsert= True)
-        	log.msg("Added to MongoDB database!",level=log.DEBUG, spider=spider)
+        	logging.log("Added to MongoDB database!",level=log.DEBUG, spider=spider)
             
         return item          
