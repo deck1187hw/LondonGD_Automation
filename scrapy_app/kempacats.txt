@@ -13,3 +13,4 @@ http://www.kempa-sports.com/en/products/category/123/referee
 http://www.kempa-sports.com/en/products/category/109/bags
 http://www.kempa-sports.com/en/products/category/779/accessoires
 http://www.kempa-sports.com/en/products/category/776/fly-high
+http://www.kempa-sports.com/en/products/category/782/caution

@@ -28,7 +28,7 @@ class SalmingSpider(scrapy.Spider):
 
 
     def __init__(self, filename=None):
-		print "HOLA"
+
 		# you must create a Cursor object. It will let
 		#  you execute all the queries you need
 		cur = self.db.cursor()

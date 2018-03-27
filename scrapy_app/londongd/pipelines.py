@@ -17,7 +17,7 @@ from scrapy.exceptions import DropItem
 class EhfmatchPipeline(object):
 
     def __init__(self):
-        #print "EHF MATCHES PIPELINE---------------------------------------"
+
         connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
@@ -43,13 +43,13 @@ class EhfmatchPipeline(object):
 class KempaPipeline(object):
 
     def __init__(self):
-        #print "KEMPA ITEM PIPELINE---------------------------------------"
+
         connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
         )
         db = connection[settings['MONGODB_DB']]
-        #db[settings['KEMPA_COLLECTION_ITEMS']].delete_many({})
+        db[settings['KEMPA_COLLECTION_ITEMS']].delete_many({})
         self.collection = db[settings['KEMPA_COLLECTION_ITEMS']]
 
 
@@ -63,6 +63,7 @@ class KempaPipeline(object):
         if valid:
         	self.collection.update({'itemId':item['itemId']},dict(item), upsert= True)
         	logging.log("Added to MongoDB database!",level=log.DEBUG, spider=spider)
+        	print "Added to MongoDB database!"+item['itemId'];
         return item  
         
         
@@ -88,7 +89,7 @@ class SalmingPipeline(object):
             self.cursor.execute("""UPDATE dwxf_store_products_salming SET description=%s, product_data=%s, images=%s,sizes=%s,image_marketing=%s,techinfo=%s WHERE url_salming=%s""", (item['itemDescription'], item['itemData'], item['itemImages'], item['itemSizes'],item['itemImagemarketing'],item['itemTech'], item['itemUrl']))
             self.conn.commit()
         except MySQLdb.Error, e:
-            print "Error %d: %s" % (e.args[0], e.args[1])
+            logging.log(logging.ERROR, "Error %d: %s" % (e.args[0], e.args[1]))
 
             return item    
 
@@ -115,11 +116,9 @@ class StockPipeline(object):
 						
 			self.cursor.execute("""REPLACE INTO dwxf_store_products_stock (kempa_id,sizes,available,light,title,stock) VALUES (%s,%s,%s,%s,%s,%s)""", (item['id'], item['sizes'],item['available'],item['light'], item['title'], item['stock']))
 			
-			
 			self.conn.commit()
-			print "LOADING ITEM IN PIPELINE!---------------------"
 		except MySQLdb.Error, e:
-			print "Error %d: %s" % (e.args[0], e.args[1])
+			logging.log(logging.ERROR, "Error %d: %s" % (e.args[0], e.args[1]))
 		return item    
 
 
@@ -138,17 +137,39 @@ class EhamatchesPipeline(object):
         )
         
         self.cursor = self.conn.cursor()
-        self.cursor.execute("""TRUNCATE TABLE dwxf_eha_matches""")
-        self.conn.commit()
         
         
 
     def process_item(self, item, spider):
 		try:
-			self.cursor.execute("""INSERT dwxf_eha_matches SET type=%s, home_team=%s, away_team=%s, date=%s, venue=%s,isgd=%s """, (item['itemType'], item['itemHome'], item['itemAway'], item['itemDate'], item['itemVenue'],item['itemIsGD']))
-			self.conn.commit()
+			#UNIQUEID: TYPE_HOME_AWAY_TIMESTAMP
+			itemHomeT = item['itemHome'].replace(" ", "").upper()[:3]
+			itemAwayT = item['itemAway'].replace(" ", "").upper()[:3]
+			dateT = item['itemDate'].strftime("%s")
+			uniqueID = str(item['itemType'])+str(itemHomeT)+str(itemAwayT)+str(dateT)
+			
+
+			
+			cursor = self.conn.cursor()
+			cursor.execute("""
+			    INSERT INTO dwxf_eha_matches 
+			        (uniqueID, type, home_team, away_team, date, venue, isgd)
+			    VALUES 
+			        (%s, %s, %s, %s, %s, %s, %s) 
+			    ON DUPLICATE KEY UPDATE 
+			        type  = VALUES(type),
+			        home_team  = VALUES(home_team),
+			        away_team  = VALUES(away_team),
+			        date  = VALUES(date),
+			        venue  = VALUES(venue),
+			        isgd   = VALUES(isgd) ;
+			               """, (uniqueID, item['itemType'], item['itemHome'], item['itemAway'], item['itemDate'], item['itemVenue'],item['itemIsGD'])
+			              )
+			self.conn.commit()		
+			
+			
 		except MySQLdb.Error, e:
-			print "Error %d: %s" % (e.args[0], e.args[1])
+			logging.log(logging.ERROR, "Error %d: %s" % (e.args[0], e.args[1]))
 		return item 
 		
 		
@@ -172,13 +193,11 @@ class SporteasyPipeline(object):
         
 
     def process_item(self, item, spider):
-	    print "ITEM--------------"
-	    print item
 	    try:
 	    	self.cursor.execute("""INSERT dwxf_londongd_events_sporteasy SET eventId=%s, date=%s, type=%s, team=%s, location=%s,locationLink=%s,name=%s, attendees=%s, linkevent=%s """, (item['itemEventid'], item['itemDate'], item['itemType'], item['itemTeam'], item['itemLocation'],item['itemLocationLink'],item['itemName'],item['itemAttendees'],item['itemLinkEvent']))
 	    	self.conn.commit()
 	    except MySQLdb.Error, e:
-	    	print "Error %d: %s" % (e.args[0], e.args[1])
+	    	logging.log(logging.ERROR, "Error %d: %s" % (e.args[0], e.args[1]))
 		return item 
 
 
@@ -186,7 +205,7 @@ class SporteasyPipeline(object):
 class KempacatPipeline(object):
 
     def __init__(self):
-        #print "KEMPA CAT PIPELINE---------------------------------------"
+
         connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']

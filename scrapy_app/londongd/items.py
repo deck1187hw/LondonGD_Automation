@@ -88,6 +88,7 @@ class kempaStoreItem(scrapy.Item):
 	itemCatid = Field()
 	itemCatslug = Field()
 	itemTitle = Field()
+	itemNew = Field()
 	itemURL = Field()
 	itemId = Field()
 	itemAllDescription = Field()

@@ -90,7 +90,6 @@ class SporteasySpider(scrapy.Spider):
         			if valueAttr == 'next-event':
 	        			if link:
 							if dtype == 'Practice':
-								print "hola"
 								yield scrapy.Request(response.meta['urlTeam'] + link,meta={'team': response.meta['team']},callback=self.loadEventById)
 
         	

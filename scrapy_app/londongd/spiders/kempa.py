@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Run this like: scrapy crawl kempa -a filename=kempacats.txt
 import scrapy
 from londongd.items import KempaCatItem
 from londongd.items import kempaStoreItem
@@ -92,9 +93,18 @@ class KempaSpider(scrapy.Spider):
             labelInfo = info.css('label::text').extract_first()
             valInfo = info.css('div.infoc::text').extract_first()
             valInfoHtml = info.css('div.infoc').extract_first()
+            valInfoNew = info.css('div.infoc').extract_first()
+            print valInfoNew
 
+
+            
             if(labelInfo == 'Colors'):
                 itemStore['itemInfoColors'] = valInfo
+                itemStore['itemNew'] = 0
+                if 'New' in valInfoNew:
+	            	itemStore['itemNew'] = 1
+	            	print itemStore['itemId']+ " Yes.--------!"            
+                
             if(labelInfo == 'Technology'):
                 itemImages = []
                 imagesTmp = info.css('div.infoc img').xpath('@src').extract()
