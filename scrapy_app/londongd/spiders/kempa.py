@@ -68,6 +68,7 @@ class KempaSpider(scrapy.Spider):
         #GET ARTICLE ID
         itemId = response.css('h2[itemprop="identifier"]::text').extract_first()
         itemStore['itemId']  = itemId.replace('Art. ', '')
+        print "ItemID: "+itemStore['itemId']
 
         # GET IMAGES
         itemImages = []
@@ -94,7 +95,7 @@ class KempaSpider(scrapy.Spider):
             valInfo = info.css('div.infoc::text').extract_first()
             valInfoHtml = info.css('div.infoc').extract_first()
             valInfoNew = info.css('div.infoc').extract_first()
-            print valInfoNew
+
 
 
             
@@ -103,7 +104,7 @@ class KempaSpider(scrapy.Spider):
                 itemStore['itemNew'] = 0
                 if 'New' in valInfoNew:
 	            	itemStore['itemNew'] = 1
-	            	print itemStore['itemId']+ " Yes.--------!"            
+         
                 
             if(labelInfo == 'Technology'):
                 itemImages = []
@@ -111,8 +112,8 @@ class KempaSpider(scrapy.Spider):
                 for itemImage in imagesTmp:
                     if itemImage not in itemImages:                    
                         itemImages.append(itemImage)
-                print "IMAGES_----------------------------"
-                print imagesTmp
+
+
                 itemStore['itemInfoTechnology'] = imagesTmp
 
             if(labelInfo == 'Sizes'):

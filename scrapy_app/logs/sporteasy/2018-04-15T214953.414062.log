@@ -1,0 +1,147 @@
+2018-04-15 21:49:53 [scrapy] DEBUG: Crawled (200) <GET https://www.sporteasy.net/en/login/> (referer: None)
+2018-04-15 21:49:53 [scrapy] DEBUG: Redirecting (302) to <GET https://www.sporteasy.net/> from <POST https://www.sporteasy.net/en/login/>
+2018-04-15 21:49:53 [scrapy] DEBUG: Redirecting (302) to <GET https://www.sporteasy.net/en/home/> from <GET https://www.sporteasy.net/>
+2018-04-15 21:49:53 [scrapy] DEBUG: Crawled (200) <GET https://www.sporteasy.net/en/home/> (referer: https://www.sporteasy.net/en/login/)
+2018-04-15 21:49:55 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/> (referer: https://www.sporteasy.net/en/home/)
+2018-04-15 21:49:55 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2017-2018/all/> (referer: https://www.sporteasy.net/en/home/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/> (referer: https://www.sporteasy.net/en/home/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947548/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947532/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947531/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947547/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947546/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:56 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947548/>
+None
+2018-04-15 21:49:56 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947532/>
+None
+2018-04-15 21:49:56 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947531/>
+None
+2018-04-15 21:49:56 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947547/>
+None
+2018-04-15 21:49:56 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947546/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947529/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947530/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947545/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947529/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947550/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947536/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639551/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947530/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947545/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947549/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/4947533/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947550/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947536/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639551/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/3911561/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639500/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639499/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639549/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947549/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/4947533/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/3911561/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639550/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639500/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639499/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639549/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639550/>
+None
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/3911562/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:57 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/3911510/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/3911511/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/3911562/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639497/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639548/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/3911510/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/3911511/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639498/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639547/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639497/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639548/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639498/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639496/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639547/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639545/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639496/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639545/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639546/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639495/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639546/>
+None
+2018-04-15 21:49:58 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639495/>
+None
+2018-04-15 21:49:59 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639494/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:59 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639493/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:59 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639543/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:59 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639544/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:59 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639494/>
+None
+2018-04-15 21:49:59 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639493/>
+None
+2018-04-15 21:49:59 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639542/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:49:59 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639543/>
+None
+2018-04-15 21:49:59 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639544/>
+None
+2018-04-15 21:49:59 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639542/>
+None
+2018-04-15 21:50:00 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639491/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:50:00 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639491/>
+None
+2018-04-15 21:50:00 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639540/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:50:00 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639540/>
+None
+2018-04-15 21:50:01 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639541/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:50:01 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639492/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:50:01 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/3639490/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2017-2018/all/)
+2018-04-15 21:50:01 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639541/>
+None
+2018-04-15 21:50:01 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639492/>
+None
+2018-04-15 21:50:01 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/3639490/>
+None
+2018-04-15 21:50:01 [scrapy] INFO: Closing spider (finished)
+2018-04-15 21:50:01 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 19429,
+ 'downloader/request_count': 46,
+ 'downloader/request_method_count/GET': 45,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 1505401,
+ 'downloader/response_count': 46,
+ 'downloader/response_status_count/200': 44,
+ 'downloader/response_status_count/302': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 15, 21, 50, 1, 979069),
+ 'item_scraped_count': 39,
+ 'log_count/DEBUG': 86,
+ 'log_count/INFO': 6,
+ 'request_depth_max': 3,
+ 'response_received_count': 44,
+ 'scheduler/dequeued': 46,
+ 'scheduler/dequeued/memory': 46,
+ 'scheduler/enqueued': 46,
+ 'scheduler/enqueued/memory': 46,
+ 'start_time': datetime.datetime(2018, 4, 15, 21, 49, 53, 448160)}
+2018-04-15 21:50:01 [scrapy] INFO: Spider closed (finished)

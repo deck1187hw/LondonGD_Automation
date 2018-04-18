@@ -36,12 +36,17 @@ class KempastockSpider(scrapy.Spider):
     item_stocks = []
     limit = ''
     
-    def __init__(self, limit='', *args, **kwargs):
+    def __init__(self, limit='', artid='', *args, **kwargs):
         
         super(KempastockSpider, self).__init__(*args, **kwargs)
+        print artid
         
         cur = self.db.cursor()
-        cur.execute("SELECT kempa_id FROM dwxf_store_products WHERE kempa_id <> '' LIMIT %s" % (limit))
+        
+        if artid == '':
+        	cur.execute("SELECT kempa_id FROM dwxf_store_products WHERE kempa_id <> '' LIMIT %s" % (limit))
+        else:
+        	cur.execute("SELECT kempa_id FROM dwxf_store_products WHERE kempa_id = %s LIMIT 1" % (artid))
         
         for row in cur.fetchall():
 		    self.id_products.append(row[0]);
@@ -57,7 +62,7 @@ class KempastockSpider(scrapy.Spider):
     def parse(self, response):
 	    return scrapy.FormRequest.from_response(
             response,
-            formdata={'UserId': '101229551', 'nolog_password': '1187hw'},
+            formdata={'UserId': '101229551', 'nolog_password': 'call77'},
             callback=self.loadKempaPageTree
         )
         
@@ -74,7 +79,7 @@ class KempastockSpider(scrapy.Spider):
     def fillFormbyID(self, response):
         
         for id in self.id_products:
-            print "loading..."+id
+            
             
             yield scrapy.FormRequest.from_response(
                 response,
@@ -93,7 +98,7 @@ class KempastockSpider(scrapy.Spider):
         areainfoNoItem = ''
         areainfoNoItem = response.css('.areainfo::text').extract_first()
         if areainfoNoItem:
-            print "Item doesnt exist or cannot be found"
+            print "Item "+currentItem+" doesnt exist or cannot be found"
         else:        
             itemStock = StockItem()
             productTitle = response.css('.cat-prd-dsc span::text').extract_first()
