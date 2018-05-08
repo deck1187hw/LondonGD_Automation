@@ -34,7 +34,7 @@ class SporteasySpider(scrapy.Spider):
         }
     }    
     start_urls = ['https://www.sporteasy.net/en/login/']
-    seasy_urls = ['https://london-gd-ladies-1st-team.sporteasy.net','https://london-gd-ladies-2nd-team.sporteasy.net',"https://london-gd-1-1.sporteasy.net"]
+    seasy_urls = ['https://london-gd-ladies-1st-team.sporteasy.net','https://london-gd-ladies-2nd-team.sporteasy.net',"https://london-gd-1-1.sporteasy.net", "https://beach-handball-team.sporteasy.net/"]
     id_products = []
     item_stocks = []
     limit = ''
@@ -64,15 +64,19 @@ class SporteasySpider(scrapy.Spider):
     def getUrls(self,response):
 
 	    for urlTeam in self.seasy_urls:
+	    	partialUrl = "/calendarlist/2017-2018/all/"
 	    	if "ladies-1st" in urlTeam:
 	    		team = 2
 	    	if "ladies-2nd" in urlTeam:
 	    		team = 4
 	    	if "gd-1-1" in urlTeam:
 	    		team = 1
+	    	if "beach-handball" in urlTeam:
+	    		team = 10
+	    		partialUrl = "/calendarlist/ebt-2017-18/all/"
 	    	
-	
-	    	yield Request(url=urlTeam+"/calendarlist/2017-2018/all/",meta={'urlTeam': urlTeam,'team':team},callback=self.loadSchedule)
+			print partialUrl
+	    	yield Request(url=urlTeam+partialUrl,meta={'urlTeam': urlTeam,'team':team},callback=self.loadSchedule)
     
 
     
