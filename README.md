@@ -27,6 +27,34 @@ $ docker run -p 9080:9080 -tid -v /var/www/automation/londongdautomation/scrapy_
 ```
 
 
+## API META 
+```
+curl localhost:9081/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "king&country!" }}, "spider_name": "ehazolve"}' | jq
+  ```  
+## CLI call
+```
+scrapy crawl ehazolve -a user="60987" -a password="king&country!"
+```
+## Docker start:
+```
+docker run -p 9080:9080 -tid -v /var/www/automation/londongdautomation/matchreport:/scrapyrt/project scrapinghub/scrapyrt
+```
+## With autorestart (localhost)
+```
+docker run -p 9080:9080 -tid --restart unless-stopped -v /var/www/automation/londongdautomation/matchreport:/scrapyrt/project scrapinghub/scrapyrt
+```
+## Run query (localhost)
+```
+curl localhost:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "king&country!" }}, "spider_name": "ehazolve"}'
+  ```  
+## Run query (ip)
+```
+curl 138.68.175.93:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "king&country!" }}, "spider_name": "ehazolve"}'
+ ```   
+
+    
+
+
 
 # Install and Run database (Docker)
 ```

@@ -1,0 +1,22 @@
+2018-05-15 14:31:38 [scrapy] DEBUG: Crawled (200) <GET http://example.com> (referer: None)
+2018-05-15 14:31:38 [scrapy] INFO: Closing spider (finished)
+2018-05-15 14:31:38 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 210,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 914,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 5, 15, 14, 31, 38, 759239),
+ 'log_count/DEBUG': 1,
+ 'log_count/INFO': 6,
+ 'memusage/max': 55238656,
+ 'memusage/startup': 55238656,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 5, 15, 14, 31, 38, 504184)}
+2018-05-15 14:31:38 [scrapy] INFO: Spider closed (finished)
