@@ -20,6 +20,13 @@ Import kempa categories
 $ scrapy crawl kempacat -a filename=kempa-cats.txt
 ```
 
+# Run Scrapyrt to run API queries to scrapy
+```
+$ docker pull scrapinghub/scrapyrt
+$ docker run -p 9080:9080 -tid -v /var/www/automation/londongdautomation/scrapy_app:/scrapyrt/project scrapinghub/scrapyrt
+```
+
+
 
 # Install and Run database (Docker)
 ```
