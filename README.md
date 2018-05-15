@@ -29,7 +29,7 @@ $ docker run -p 9080:9080 -tid -v /var/www/automation/londongdautomation/scrapy_
 
 ## API META 
 ```
-curl localhost:9081/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "king&country!" }}, "spider_name": "ehazolve"}' | jq
+curl localhost:9081/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "ehazolve"}' | jq
   ```  
 ## CLI call
 ```
@@ -45,11 +45,11 @@ docker run -p 9080:9080 -tid --restart unless-stopped -v /var/www/automation/lon
 ```
 ## Run query (localhost)
 ```
-curl localhost:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "king&country!" }}, "spider_name": "ehazolve"}'
+curl localhost:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "ehazolve"}'
   ```  
 ## Run query (ip)
 ```
-curl 138.68.175.93:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "king&country!" }}, "spider_name": "ehazolve"}'
+curl 138.68.175.93:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "ehazolve"}'
  ```   
 
     
