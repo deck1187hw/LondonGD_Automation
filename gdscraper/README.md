@@ -22,32 +22,19 @@ $ scrapy crawl kempacat -a filename=kempa-cats.txt
 
 # Run Scrapyrt to run API queries to scrapy
 ```
-$ docker pull scrapinghub/scrapyrt
-$ docker run -p 9080:9080 -tid -v /var/www/automation/londongdautomation/scrapy_app:/scrapyrt/project scrapinghub/scrapyrt
+docker pull scrapinghub/scrapyrt
+docker run -p 9080:9080 -tid --restart unless-stopped --name apigd -v /var/www/automation/londongdautomation/gdscraper:/scrapyrt/project scrapinghub/scrapyrt
 ```
 
 
-## API META 
+## API Docs
+### GET EHA Members
 ```
-curl localhost:9081/crawl.json -d '{"request":{"url":"http://dummy.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "ehazolve"}' | jq
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://dummy.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "eha"}'
   ```  
-## CLI call
+  
+  
+## CLI call example
 ```
-scrapy crawl ehazolve -a user="60987" -a password="XXXXXX"
+scrapy crawl eha -a user="60987" -a password="XXXXXX"
 ```
-## Docker start:
-```
-docker run -p 9080:9080 -tid -v /var/www/automation/londongdautomation/gdscraper:/scrapyrt/project scrapinghub/scrapyrt
-```
-## With autorestart (localhost)
-```
-docker run -p 9080:9080 -tid --restart unless-stopped -v /var/www/automation/londongdautomation/matchreport:/scrapyrt/project scrapinghub/scrapyrt
-```
-## Run query (localhost)
-```
-curl localhost:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "ehazolve"}'
-  ```  
-## Run query (ip)
-```
-curl 138.68.175.93:9080/crawl.json -d '{"request":{"url":"http://example.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "ehazolve"}'
- ```
