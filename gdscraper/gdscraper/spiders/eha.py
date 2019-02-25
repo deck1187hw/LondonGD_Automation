@@ -6,10 +6,10 @@ from json import JSONEncoder
 import base64
 from scrapy.http import FormRequest
 from scrapy.http import Request
-from matchreport.items import Member
+from gdscraper.items import Member
 
-class EhazolveSpider(scrapy.Spider):
-    name = "ehazolve"
+class EhaSpider(scrapy.Spider):
+    name = "eha"
     allowed_domains = ["englandhandball.azolve.com"]
     start_urls = (
         'https://englandhandball.azolve.com/Account.mvc/Login',

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for matchreport project
+# Scrapy settings for gdscraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,15 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'matchreport'
+BOT_NAME = 'gdscraper'
 
-SPIDER_MODULES = ['matchreport.spiders']
-NEWSPIDER_MODULE = 'matchreport.spiders'
-DOWNLOAD_HANDLERS = {'s3': None,}
+SPIDER_MODULES = ['gdscraper.spiders']
+NEWSPIDER_MODULE = 'gdscraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'matchreport (+http://www.yourdomain.com)'
+#USER_AGENT = 'gdscraper (+http://www.yourdomain.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -45,13 +44,13 @@ DOWNLOAD_HANDLERS = {'s3': None,}
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'matchreport.middlewares.MyCustomSpiderMiddleware': 543,
+#    'gdscraper.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'matchreport.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'gdscraper.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +62,7 @@ DOWNLOAD_HANDLERS = {'s3': None,}
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'matchreport.pipelines.SomePipeline': 300,
+#    'gdscraper.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
