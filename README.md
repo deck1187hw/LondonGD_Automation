@@ -5,7 +5,7 @@
 Automation tools built in Python Scrapy to automate common tasks for London GD Handball club website
 
 
-# Basic Instruction to run a spider
+# Basic Instruction to run a spider 
 
 
 ```sh
