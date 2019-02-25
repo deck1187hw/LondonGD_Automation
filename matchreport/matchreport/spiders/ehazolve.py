@@ -24,6 +24,7 @@ class EhazolveSpider(scrapy.Spider):
         
         self.azolveUser = user
         self.azolvePass = password
+        self.items = []
 						
     def parse(self, response):
 	    if "user" in response.meta:
@@ -46,6 +47,8 @@ class EhazolveSpider(scrapy.Spider):
 	    jsonresponse = json.loads(response.body_as_unicode())
 	    for member in jsonresponse[0]["Result"]["clubMembers"]:
 	    	item = Member()
+	    	item['MID'] = member['MID']
+	    	item['Role'] = member['Role']
 	    	item['UserId'] = member['UserId']
 	    	item['FirstName'] = member['FirstName']
 	    	item['Surname'] = member['Surname']

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#CRAWL SINGLE ARTICLE: scrapy crawl kempastock -a artid="200209202"
 import scrapy
 import json
 from json import JSONEncoder
@@ -94,6 +95,7 @@ class KempastockSpider(scrapy.Spider):
     def loadProductByID(self,response):
         
         currentItem = response.meta.get('itemid')
+        print currentItem
             
         areainfoNoItem = ''
         areainfoNoItem = response.css('.areainfo::text').extract_first()
@@ -105,6 +107,7 @@ class KempastockSpider(scrapy.Spider):
             productId = response.css('.cat-prd-id p span div::text').extract_first()
             productSizes = response.selector.xpath("//table[@class='uhlGridTable']/tr[1]//th/text()").extract()
             productSizes_stock = response.selector.xpath("//table[@class='uhlGridItemPos']/tr[1]//td/text()").extract()  
+            
             productSizes_date = response.selector.xpath("//table[@class='uhlGridItemPos']/tr[2]//td/text()").extract()
             productSizes_stocklight = response.selector.xpath("//table[@class='uhlGridItemPos']/tr[3]//td//img/@src").extract()  
             
