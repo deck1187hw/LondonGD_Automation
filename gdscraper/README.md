@@ -7,7 +7,7 @@ Automation tools built in Python Scrapy to automate common tasks for London GD H
 # Run Scrapyrt to run API queries to scrapy
 ```
 docker pull scrapinghub/scrapyrt
-docker run -p 9080:9080 -tid --restart unless-stopped --name apigd -v /var/www/automation/londongdautomation/gdscraper:/scrapyrt/project scrapinghub/scrapyrt
+docker stop apigd; docker rm apigd; docker run -p 9080:9080 -tid --restart unless-stopped --name apigd -v /var/www/automation/londongdautomation/gdscraper:/scrapyrt/project scrapinghub/scrapyrt
 ```
 
 
@@ -22,3 +22,5 @@ curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":
 ```
 scrapy crawl eha -a user="60987" -a password="XXXXXX"
 ```
+
+

@@ -45,4 +45,27 @@ class ehamatchesItem(scrapy.Item):
 	project = scrapy.Field()
 	spider = scrapy.Field()
 	server = scrapy.Field()
-	date = scrapy.Field()		
+	date = scrapy.Field()
+
+class SporteasyItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+
+	# Primary fields
+	itemEventid = scrapy.Field()
+	itemDate = scrapy.Field()
+	itemName = scrapy.Field()
+	itemType = scrapy.Field()
+	itemAttendees = scrapy.Field()
+	itemLocation = scrapy.Field()
+	itemLocationLink = scrapy.Field()
+	itemTeam = scrapy.Field()
+	itemLinkEvent = scrapy.Field()
+
+
+	# Housekeeping fields
+	url = scrapy.Field()
+	project = scrapy.Field()
+	spider = scrapy.Field()
+	server = scrapy.Field()
+	date = scrapy.Field()

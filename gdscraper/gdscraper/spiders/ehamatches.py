@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import datetime
+import scrapy
+
 from gdscraper.items import ehamatchesItem
-from scrapy.loader import ItemLoader
-from scrapy.selector import HtmlXPathSelector
-from scrapy.conf import settings
-from scrapy import signals
-from scrapy.xlib.pydispatch import dispatcher
-import json
-import logging
 
 
 class EhamatchesSpider(scrapy.Spider):
@@ -21,40 +16,17 @@ class EhamatchesSpider(scrapy.Spider):
     teamsItem = []
 
     def __init__(self, filename=None):
-        logging.info("-- Reading EHA matches --")
         self.teamsItem = []
-        dispatcher.connect(self.spider_closed, signals.spider_closed)
 
     def spider_closed(self, spider):
-        # second param is instance of spder about to be closed.
-        # logging.info(self.teamsItem)
-        logging.info("-- Reading EHA matches ---------------------------------------------------111")
-        return self.teamsItem
+        print "close..."
 
     def parse(self, response):
-
         leagueName = response.css('div.page-title div.container h1::text').extract_first()
-        logging.log(logging.INFO, "Parsing: " + leagueName)
+        item = ehamatchesItem()
+        item['itemHome'] = leagueName
 
-        if "Regional League South East Tier 1 - women" in leagueName:
-            gamesLi = response.css('div.female .carousel-container ul li')
-            self.parse_team(gamesLi, 4)
-
-        if "Regional League South East  Tier 1 - men" in leagueName:
-            gamesLi = response.css('div.male .carousel-container ul li')
-            self.parse_team(gamesLi, 5)
-
-        if "Regional League South East A - men" in leagueName:
-            gamesLi = response.css('div.male .carousel-container ul li')
-            self.parse_team(gamesLi, 3)
-
-        if "Premier Handball League" in leagueName:
-            gamesLi = response.css('div.male .carousel-container ul li')
-            self.parse_team(gamesLi, 1)
-            gamesLi = response.css('div.female .carousel-container ul li')
-            self.parse_team(gamesLi, 2)
-
-        return self.teamsItem
+        return item
 
     def parse_team(self, team, itemId):
 
