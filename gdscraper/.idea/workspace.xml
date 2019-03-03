@@ -2,9 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141f479f-9ce8-4bee-878d-2715730acf48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gdscraper/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/gdscraper/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gdscraper/spiders/ehamatches.py" beforeDir="false" afterPath="$PROJECT_DIR$/gdscraper/spiders/ehamatches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T212848.050315.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T213150.289411.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T213204.636867.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T213531.562571.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T213917.994380.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T215641.564063.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-25T222548.318954.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-26T224125.839139.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T194817.356702.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T221344.309314.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222038.578628.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222404.048848.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222418.653161.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222425.520940.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222428.868861.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222519.160219.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222533.093904.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222742.314250.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222814.179684.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T222842.981214.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223038.369979.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223042.359829.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223103.853939.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223115.836743.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223125.880987.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223140.883402.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223159.538993.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223215.360064.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223443.833857.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223610.418359.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223632.735078.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223652.558460.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223713.064893.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223722.872086.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223742.266352.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223758.084814.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T223853.723804.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224132.346318.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224216.411767.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224228.521476.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224245.446531.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224322.644533.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224337.203370.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T224440.845986.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225125.454705.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225148.384354.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225211.050501.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225229.944448.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225432.292192.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225522.610927.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225648.830416.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225800.803123.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225831.361593.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T225841.039620.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T230207.817363.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T230220.187468.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T230533.919987.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T230640.984240.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T231026.069781.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T231105.607994.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-02-28T231803.545307.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-01T144523.345230.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-01T144707.033407.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-01T144934.086152.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-01T145159.430922.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-01T145840.917893.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-01T145906.429414.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-02T121744.040637.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/eha/2019-03-02T193800.746088.log" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +82,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gdscraper/spiders/eha.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gdscraper/spiders/ehamatches.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="240">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -36,15 +115,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gdscraper/spiders/eha.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gdscraper/items.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="173">
@@ -53,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gdscraper/spiders/sporteasytrainings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+            <state relative-caret-position="1890">
+              <caret line="126" column="2" lean-forward="true" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -71,6 +141,7 @@
     <findStrings>
       <find>jsonresponse</find>
       <find>items</find>
+      <find>pipe</find>
       <find>azolveUser</find>
     </findStrings>
   </component>
@@ -81,9 +152,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/gdscraper/spiders/ehamatches.py" />
         <option value="$PROJECT_DIR$/gdscraper/items.py" />
         <option value="$PROJECT_DIR$/gdscraper/spiders/sporteasytrainings.py" />
+        <option value="$PROJECT_DIR$/gdscraper/spiders/ehamatches.py" />
       </list>
     </option>
   </component>
@@ -203,20 +274,20 @@
     <entry file="file://$PROJECT_DIR$/gdscraper/pipelines.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/ehamatches.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" lean-forward="true" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/sporteasytrainings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="126" column="2" lean-forward="true" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -229,15 +300,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gdscraper/spiders/eha.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="195">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/sporteasytrainings.py">
+    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/ehamatches.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        <state relative-caret-position="240">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>

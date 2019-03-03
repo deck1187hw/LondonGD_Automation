@@ -9,17 +9,13 @@ from gdscraper.items import ehamatchesItem
 class EhamatchesSpider(scrapy.Spider):
     name = "ehamatches"
     allowed_domains = ["englandhandball.com"]
-    start_urls = ["http://www.englandhandball.com/league/premier-handball-league",
-                  "http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women",
-                  "http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1/men",
-                  "http://www.englandhandball.com/regional-development-league/regional-league-south-east-a/men"]
+    start_urls = (
+        'http://www.englandhandball.com/league/premier-handball-league',
+    )
     teamsItem = []
 
-    def __init__(self, filename=None):
+    def __init__(self, user='', password='', *args, **kwargs):
         self.teamsItem = []
-
-    def spider_closed(self, spider):
-        print "close..."
 
     def parse(self, response):
         leagueName = response.css('div.page-title div.container h1::text').extract_first()
