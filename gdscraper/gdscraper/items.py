@@ -27,3 +27,22 @@ class Member(scrapy.Item):
 	ClubMemberDocId = scrapy.Field()
 	MemberDocId = scrapy.Field()
 	MID = scrapy.Field()
+	
+class ehamatchesItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	itemType = scrapy.Field()
+	itemHome = scrapy.Field()
+	itemAway = scrapy.Field()
+	itemDate = scrapy.Field()
+	itemIsGD = scrapy.Field()
+	itemVenue = scrapy.Field()
+	
+	# Housekeeping fields
+	url = scrapy.Field()
+	project = scrapy.Field()
+	spider = scrapy.Field()
+	server = scrapy.Field()
+	date = scrapy.Field()		
