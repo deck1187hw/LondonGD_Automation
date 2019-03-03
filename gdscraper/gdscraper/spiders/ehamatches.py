@@ -20,7 +20,7 @@ class EhamatchesSpider(scrapy.Spider):
     def parse(self, response):
         leagueName = response.css('div.page-title div.container h1::text').extract_first()
         item = ehamatchesItem()
-        item['itemHome'] = leagueName
+        item['itemHome'] = "LEAGE: "+leagueName
 
         return item
 
