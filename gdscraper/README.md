@@ -1,4 +1,4 @@
-# London GD Automation
+# GD Scraper
 
 [![N|Solid](https://londongdhandball.co.uk/templates/londongd2015/img/logo.png)](https://londongdhandball.co.uk)
 
