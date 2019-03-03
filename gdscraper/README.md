@@ -30,10 +30,31 @@ curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":
 | http://www.englandhandball.com/regional-development-league/regional-league-south-east-a/men |
 
 
+
+### GET EHA Fixtures
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://www.englandhandball.com/league/premier-handball-league", "meta": {"type":"women", "teamId": "2" }}, "spider_name": "ehafixtures"}'
+  ```
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://www.englandhandball.com/league/premier-handball-league", "meta": {"type":"men", "teamId": "1" }}, "spider_name": "ehafixtures"}'
+  ```
+| Urls allowed        |
+| ------------- |
+| http://www.englandhandball.com/league/premier-handball-league |
+| http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women |
+| http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1/men |
+| http://www.englandhandball.com/regional-development-league/regional-league-south-east-a/men |
+
+
+
+
 ### GET SportEasy Trainings Matches
 ```
 curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"https://www.sporteasy.net/en/login/"}, "spider_name": "sporteasytrainings"}'
   ```
+
+
+
 
 
 
