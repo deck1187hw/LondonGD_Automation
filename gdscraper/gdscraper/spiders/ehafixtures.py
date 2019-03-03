@@ -6,7 +6,7 @@ class EhafixturesSpider(scrapy.Spider):
     name = 'ehafixtures'
     allowed_domains = ['englandhandball.com']
     start_urls = ['https://www.englandhandball.com/league/premier-handball-league']
-    type = []
+    type = ''
     teamId = ''
 
     def __init__(self, type='', teamId='',  *args, **kwargs):
