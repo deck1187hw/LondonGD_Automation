@@ -22,8 +22,7 @@ curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":
 ```
 curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://www.englandhandball.com/league/premier-handball-league"}, "spider_name": "ehamatches"}'
   ```
-#### Urls allowed
-| Tables        |
+| Urls allowed        |
 | ------------- |
 | http://www.englandhandball.com/league/premier-handball-league |
 | http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women |
