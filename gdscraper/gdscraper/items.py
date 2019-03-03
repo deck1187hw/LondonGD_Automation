@@ -69,3 +69,21 @@ class SporteasyItem(scrapy.Item):
 	spider = scrapy.Field()
 	server = scrapy.Field()
 	date = scrapy.Field()
+
+class EhafixturesItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+
+	# Primary fields
+	itemType = scrapy.Field()
+	itemHtml = scrapy.Field()
+	itemTeamId = scrapy.Field()
+	itemNameLeague = scrapy.Field()
+
+
+	# Housekeeping fields
+	url = scrapy.Field()
+	project = scrapy.Field()
+	spider = scrapy.Field()
+	server = scrapy.Field()
+	date = scrapy.Field()

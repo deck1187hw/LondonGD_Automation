@@ -26,7 +26,6 @@ class MyEncoder(JSONEncoder):
 class SporteasySpider(scrapy.Spider):
     name = "sporteasytrainings"
     allowed_domains = ["sporteasy.net"]
-    mainUrl = 'https://shop.uhlsportcompany.com'
     main_domain_prod = "https://london-gd-ladies-2nd-team.sporteasy.net"
     start_urls = ['https://www.sporteasy.net/en/login/']
     seasy_urls = ['https://london-gd-ladies-1st-team.sporteasy.net', 'https://london-gd-ladies-2nd-team.sporteasy.net',
