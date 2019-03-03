@@ -26,7 +26,7 @@ class EhafixturesSpider(scrapy.Spider):
             leagueName = response.selector.xpath('//*[@id="standings"]/div[1]/div[1]/p').get()
 
         item = EhafixturesItem()
-        item['itemNameLeague'] = leagueName
+        item['itemNameLeague'] = response.request.url
         item['itemHtml'] = leagueHtml
         item['itemTeamId'] = self.teamId
         return item
