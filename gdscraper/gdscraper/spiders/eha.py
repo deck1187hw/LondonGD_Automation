@@ -45,6 +45,8 @@ class EhaSpider(scrapy.Spider):
     
     def loginAzolveStep3(self, response):
 	    jsonresponse = json.loads(response.body_as_unicode())
+	    print "JSON-------------"
+	    print jsonresponse
 	    for member in jsonresponse[0]["Result"]["clubMembers"]:
 	    	item = Member()
 	    	item['MID'] = member['MID']

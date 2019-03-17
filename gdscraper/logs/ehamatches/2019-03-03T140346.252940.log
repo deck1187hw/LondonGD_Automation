@@ -1,0 +1,249 @@
+2019-03-03 14:03:46 [scrapy] DEBUG: Redirecting (301) to <GET https://www.englandhandball.com/league/premier-handball-league> from <GET http://www.englandhandball.com/league/premier-handball-league>
+2019-03-03 14:03:47 [scrapy] DEBUG: Crawled (200) <GET https://www.englandhandball.com/league/premier-handball-league> (referer: None)
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'NEM Hawks',
+ 'itemDate': datetime.datetime(2019, 3, 9, 14, 30),
+ 'itemHome': u'Cambridge',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Leyton Score Centre, E10 5JY'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Nottingham',
+ 'itemDate': datetime.datetime(2019, 3, 9, 15, 0),
+ 'itemHome': u'West London Eagles',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Barking Sporthouse Mayesbrook Park, Lodge Ave, Dagenham RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Olympia',
+ 'itemDate': datetime.datetime(2019, 3, 10, 12, 30),
+ 'itemHome': u'Warrington Wolves',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Birchwood Tennis and Leisure Centre, Benson Way, Birchwood, Warrington'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Brighton Seahawks',
+ 'itemDate': datetime.datetime(2019, 3, 16, 14, 0),
+ 'itemHome': u'London GD',
+ 'itemIsGD': 1,
+ 'itemType': 1,
+ 'itemVenue': u'Leyton Score Centre'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'London GD',
+ 'itemDate': datetime.datetime(2019, 3, 30, 13, 0),
+ 'itemHome': u'West London Eagles',
+ 'itemIsGD': 1,
+ 'itemType': 1,
+ 'itemVenue': u'Barking Sporthouse Mayesbrook Park, Lodge Ave, Dagenham RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Cambridge',
+ 'itemDate': datetime.datetime(2019, 3, 30, 13, 30),
+ 'itemHome': u'Warrington Wolves',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Soccerdome, Trafford Way, Manchester M17 8DD'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Nottingham',
+ 'itemDate': datetime.datetime(2019, 3, 30, 14, 30),
+ 'itemHome': u'Brighton Seahawks',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'The Dolphin Leisure Centre, Pasture Hill Road, Haywards Heath RH16 1LY'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Olympia',
+ 'itemDate': datetime.datetime(2019, 3, 31, 13, 30),
+ 'itemHome': u'NEM Hawks',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Oldham Leisure Centre, Middleton Road, Oldham OL9 6EJ'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'West London Eagles',
+ 'itemDate': datetime.datetime(2019, 4, 6, 14, 30),
+ 'itemHome': u'Cambridge',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Sporthouse Barking, RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'NEM Hawks',
+ 'itemDate': datetime.datetime(2019, 4, 6, 14, 30),
+ 'itemHome': u'Nottingham',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Derby Arena, DE24 8JB'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Brighton Seahawks',
+ 'itemDate': datetime.datetime(2019, 4, 6, 16, 30),
+ 'itemHome': u'Olympia',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Leyton Score centre 100 Oliver Rd, London E10 5JY'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Warrington Wolves',
+ 'itemDate': datetime.datetime(2019, 4, 7, 16, 30),
+ 'itemHome': u'London GD',
+ 'itemIsGD': 1,
+ 'itemType': 1,
+ 'itemVenue': u'Leyton'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'London GD',
+ 'itemDate': datetime.datetime(2019, 4, 27, 14, 30),
+ 'itemHome': u'Cambridge',
+ 'itemIsGD': 1,
+ 'itemType': 1,
+ 'itemVenue': u'Leyton Score Centre, E10 5JY'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Warrington Wolves',
+ 'itemDate': datetime.datetime(2019, 4, 27, 15, 0),
+ 'itemHome': u'West London Eagles',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Barking Sporthouse Mayesbrook Park, Lodge Ave, Dagenham RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Olympia',
+ 'itemDate': datetime.datetime(2019, 4, 27, 15, 30),
+ 'itemHome': u'Nottingham',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Derby Arena, DE24 8JB'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Brighton Seahawks',
+ 'itemDate': datetime.datetime(2019, 4, 28, 13, 30),
+ 'itemHome': u'NEM Hawks',
+ 'itemIsGD': 0,
+ 'itemType': 1,
+ 'itemVenue': u'Oldham Leisure Centre, Middleton Road, Oldham OL9 6EJ'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'University of Loughborough',
+ 'itemDate': datetime.datetime(2019, 3, 9, 13, 0),
+ 'itemHome': u'West London Eagles',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Barking Sporthouse Mayesbrook Park, Lodge Ave, Dagenham RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'NEM Hawks',
+ 'itemDate': datetime.datetime(2019, 3, 9, 13, 30),
+ 'itemHome': u'Peninsula',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Oldham Leisure Centre'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Olympia',
+ 'itemDate': datetime.datetime(2019, 3, 10, 13, 30),
+ 'itemHome': u'London Angels',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Barking Sport Centre RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Reading Lionesses',
+ 'itemDate': datetime.datetime(2019, 3, 23, 14, 30),
+ 'itemHome': u'London GD',
+ 'itemIsGD': 1,
+ 'itemType': 2,
+ 'itemVenue': u'Leyton'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'London GD',
+ 'itemDate': datetime.datetime(2019, 3, 30, 15, 0),
+ 'itemHome': u'West London Eagles',
+ 'itemIsGD': 1,
+ 'itemType': 2,
+ 'itemVenue': u'Barking Sporthouse Mayesbrook Park, Lodge Ave, Dagenham RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'University of Loughborough',
+ 'itemDate': datetime.datetime(2019, 3, 31, 12, 30),
+ 'itemHome': u'Reading Lionesses',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Loddon Valley Leisure Centre, Rushey Way, Lower Earley, Berkshire, RG6 4GD'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Peninsula',
+ 'itemDate': datetime.datetime(2019, 3, 31, 13, 30),
+ 'itemHome': u'London Angels',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Barking Sport House RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Olympia',
+ 'itemDate': datetime.datetime(2019, 3, 31, 15, 30),
+ 'itemHome': u'NEM Hawks',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Oldham Leisure Centre, Middleton Road, Oldham OL9 6EJ'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Reading Lionesses',
+ 'itemDate': datetime.datetime(2019, 4, 6, 14, 30),
+ 'itemHome': u'Olympia',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Leyton Score centre 100 Oliver Rd, London E10 5JY'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'West London Eagles',
+ 'itemDate': datetime.datetime(2019, 4, 7, 13, 0),
+ 'itemHome': u'Peninsula',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Birchwood Leisure Complex, WA3 7PQ4'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'London Angels',
+ 'itemDate': datetime.datetime(2019, 4, 7, 14, 30),
+ 'itemHome': u'London GD',
+ 'itemIsGD': 1,
+ 'itemType': 2,
+ 'itemVenue': u'Leyton'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'NEM Hawks',
+ 'itemDate': datetime.datetime(2019, 4, 7, 17, 0),
+ 'itemHome': u'University of Loughborough',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Derby Arena'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Olympia',
+ 'itemDate': datetime.datetime(2019, 4, 27, 13, 0),
+ 'itemHome': u'University of Loughborough',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Sir David Wallace Sports Centre - Loughborough'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'London Angels',
+ 'itemDate': datetime.datetime(2019, 4, 27, 13, 0),
+ 'itemHome': u'West London Eagles',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Barking Sporthouse Mayesbrook Park, Lodge Ave, Dagenham RM8 2JR'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'London GD',
+ 'itemDate': datetime.datetime(2019, 4, 28, 13, 0),
+ 'itemHome': u'Peninsula',
+ 'itemIsGD': 1,
+ 'itemType': 2,
+ 'itemVenue': u'Birchwood Leisure Complex, WA3 7PQ'}
+2019-03-03 14:03:47 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/league/premier-handball-league>
+{'itemAway': u'Reading Lionesses',
+ 'itemDate': datetime.datetime(2019, 4, 28, 15, 30),
+ 'itemHome': u'NEM Hawks',
+ 'itemIsGD': 0,
+ 'itemType': 2,
+ 'itemVenue': u'Oldham Leisure Centre, Middleton Road, Oldham OL9 6EJ'}
+2019-03-03 14:03:47 [scrapy] INFO: Closing spider (finished)
+2019-03-03 14:03:47 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 504,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 14350,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 3, 14, 3, 47, 675998),
+ 'item_scraped_count': 32,
+ 'log_count/DEBUG': 34,
+ 'log_count/INFO': 6,
+ 'memusage/max': 74407936,
+ 'memusage/startup': 74407936,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2019, 3, 3, 14, 3, 46, 267437)}
+2019-03-03 14:03:47 [scrapy] INFO: Spider closed (finished)

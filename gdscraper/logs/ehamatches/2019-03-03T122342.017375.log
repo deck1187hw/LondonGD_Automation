@@ -1,0 +1,46 @@
+2019-03-03 12:23:42 [scrapy] DEBUG: Redirecting (301) to <GET https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women> from <GET http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women>
+2019-03-03 12:23:43 [scrapy] DEBUG: Crawled (200) <GET https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women> (referer: None)
+2019-03-03 12:23:43 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women>
+{'itemAway': u'London GD II',
+ 'itemDate': datetime.datetime(2019, 3, 9, 12, 30),
+ 'itemHome': u'Cambridge',
+ 'itemIsGD': 1,
+ 'itemType': 4,
+ 'itemVenue': u'Leyton Score'}
+2019-03-03 12:23:43 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women>
+{'itemAway': u'Islington',
+ 'itemDate': datetime.datetime(2019, 3, 24, 14, 0),
+ 'itemHome': u'Oxford University',
+ 'itemIsGD': 0,
+ 'itemType': 4,
+ 'itemVenue': u'Faringdon Leisure Centre, Fernham Road, Faringdon, Oxfordshire SN7 7LB'}
+2019-03-03 12:23:43 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women>
+{'itemAway': u'Olympia II',
+ 'itemDate': datetime.datetime(2019, 4, 7, 12, 30),
+ 'itemHome': u'London GD II',
+ 'itemIsGD': 1,
+ 'itemType': 4,
+ 'itemVenue': u'Leyton'}
+2019-03-03 12:23:43 [scrapy] INFO: Closing spider (finished)
+2019-03-03 12:23:43 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 582,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 8882,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 3, 12, 23, 43, 140170),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 6,
+ 'memusage/max': 61308928,
+ 'memusage/startup': 61308928,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2019, 3, 3, 12, 23, 42, 32430)}
+2019-03-03 12:23:43 [scrapy] INFO: Spider closed (finished)

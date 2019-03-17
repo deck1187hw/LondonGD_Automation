@@ -1,0 +1,35 @@
+2019-03-03 12:15:20 [scrapy] DEBUG: Crawled (200) <GET http://example.com> (referer: None)
+2019-03-03 12:15:21 [scrapy] ERROR: Spider error processing <GET http://example.com> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/scrapyrt/project/gdscraper/spiders/sporteasytrainings.py", line 54, in parse
+    callback=self.getUrls
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/http/request/form.py", line 48, in from_response
+    form = _get_form(response, formname, formid, formnumber, formxpath)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/http/request/form.py", line 77, in _get_form
+    raise ValueError("No <form> element found in %s" % response)
+ValueError: No <form> element found in <200 http://example.com>
+2019-03-03 12:15:21 [scrapy] INFO: Closing spider (finished)
+2019-03-03 12:15:21 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 210,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 946,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 3, 12, 15, 21, 194608),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 6,
+ 'memusage/max': 59256832,
+ 'memusage/startup': 59256832,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/ValueError': 1,
+ 'start_time': datetime.datetime(2019, 3, 3, 12, 15, 20, 805820)}
+2019-03-03 12:15:21 [scrapy] INFO: Spider closed (finished)

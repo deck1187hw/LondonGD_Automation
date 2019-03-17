@@ -1,0 +1,27 @@
+2019-03-17 11:19:21 [scrapy] DEBUG: Redirecting (302) to <GET https://www.hugedomains.com/domain_profile.cfm?d=notneeded&e=com> from <GET http://notneeded.com>
+2019-03-17 11:19:21 [scrapy] DEBUG: Crawled (200) <GET https://www.hugedomains.com/domain_profile.cfm?d=notneeded&e=com> (referer: None)
+2019-03-17 11:19:21 [scrapy] DEBUG: Scraped from <200 https://www.hugedomains.com/domain_profile.cfm?d=notneeded&e=com>
+{'itemHtml': None, 'itemNameLeague': None, 'itemTeamId': 1}
+2019-03-17 11:19:21 [scrapy] INFO: Closing spider (finished)
+2019-03-17 11:19:21 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 466,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 5499,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/302': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 17, 11, 19, 21, 720853),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 6,
+ 'memusage/max': 55205888,
+ 'memusage/startup': 55205888,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2019, 3, 17, 11, 19, 21, 147083)}
+2019-03-17 11:19:21 [scrapy] INFO: Spider closed (finished)

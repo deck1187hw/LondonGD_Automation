@@ -1,0 +1,29 @@
+2019-03-17 11:37:33 [scrapy] DEBUG: Redirecting (301) to <GET https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women> from <GET http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women>
+2019-03-17 11:37:34 [scrapy] DEBUG: Crawled (200) <GET https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women> (referer: None)
+2019-03-17 11:37:34 [scrapy] DEBUG: Scraped from <200 https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women>
+{'itemHtml': u'<div class="table-responsive">\n            <table class="table">\n                <tbody>\n                    <tr class="key">\n                        <td>Pos</td>\n                        <td>Team</td>\n                        <td>PTS</td>\n                        <td>P</td>\n                        <td>W</td>\n                        <td>D</td>\n                        <td>L</td>\n                        <td>GF</td>\n                        <td>GA</td>\n                        <td>GD</td>\n                    </tr>\n                                        <tr class="list">\n                        <td>1</td>\n                        <td>Cambridge</td>\n                        <td>20</td>\n                        <td>8</td>\n                        <td>6</td>\n                        <td>0</td>\n                        <td>2</td>\n                        <td>193</td>\n                        <td>136</td>\n                        <td>57</td>\n                    </tr>\n                                        <tr class="list">\n                        <td>2</td>\n                        <td>London GD II</td>\n                        <td>18</td>\n                        <td>6</td>\n                        <td>6</td>\n                        <td>0</td>\n                        <td>0</td>\n                        <td>164</td>\n                        <td>104</td>\n                        <td>60</td>\n                    </tr>\n                                        <tr class="list">\n                        <td>3</td>\n                        <td>Oxford University</td>\n                        <td>10</td>\n                        <td>7</td>\n                        <td>1</td>\n                        <td>1</td>\n                        <td>5</td>\n                        <td>111</td>\n                        <td>168</td>\n                        <td>-57</td>\n                    </tr>\n                                        <tr class="list">\n                        <td>4</td>\n                        <td>Olympia II</td>\n                        <td>8</td>\n                        <td>5</td>\n                        <td>1</td>\n                        <td>1</td>\n                        <td>3</td>\n                        <td>101</td>\n                        <td>119</td>\n                        <td>-18</td>\n                    </tr>\n                                        <tr class="list">\n                        <td>5</td>\n                        <td>Islington</td>\n                        <td>2</td>\n                        <td>4</td>\n                        <td>0</td>\n                        <td>0</td>\n                        <td>4</td>\n                        <td>35</td>\n                        <td>77</td>\n                        <td>-42</td>\n                    </tr>\n                                    </tbody>\n            </table>\n        </div>',
+ 'itemNameLeague': u"<p>Regional League South East Tier 1 - Women's  League Table</p>",
+ 'itemTeamId': 'https://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women'}
+2019-03-17 11:37:34 [scrapy] INFO: Closing spider (finished)
+2019-03-17 11:37:34 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 582,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 8908,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 17, 11, 37, 34, 400665),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 6,
+ 'memusage/max': 54886400,
+ 'memusage/startup': 54886400,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2019, 3, 17, 11, 37, 33, 341575)}
+2019-03-17 11:37:34 [scrapy] INFO: Spider closed (finished)

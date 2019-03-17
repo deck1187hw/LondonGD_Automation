@@ -12,6 +12,20 @@ docker stop apigd; docker rm apigd; docker run -p 9080:9080 -tid --restart unles
 
 
 ## API Docs
+
+### GET EHA Fixtures (HTML table)
+#### Get PHL Women
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://www.englandhandball.com/league/premier-handball-league", "meta": {"type":"women", "teamId": "5c6b312a6b1a993e85c466ec" }}, "spider_name": "ehafixtures"}'
+  ```
+  
+#### Get PHL Men
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://www.englandhandball.com/league/premier-handball-league", "meta": {"type":"men", "teamId": "5c6b2fe800443f3db1b4e73c" }}, "spider_name": "ehafixtures"}'
+  ```  
+
+
+
 ### GET EHA Members
 ```
 curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"http://notneeded.com", "meta": {"user":"60987", "password": "xxxx" }}, "spider_name": "eha"}'
@@ -38,8 +52,12 @@ curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":
 
 
 ## CLI call example
+### Get all EHA users
 ```
 scrapy crawl eha -a user="60987" -a password="XXXXXX"
 ```
-
+### Get all fixtures
+```
+scrapy crawl ehafixtures
+```
 

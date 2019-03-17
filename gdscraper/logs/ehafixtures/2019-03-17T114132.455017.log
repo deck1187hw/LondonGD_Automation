@@ -1,0 +1,33 @@
+2019-03-17 11:41:32 [scrapy] DEBUG: Redirecting (301) to <GET https://www.englandhandball.com/league/premier-handball-league> from <GET http://www.englandhandball.com/league/premier-handball-league>
+2019-03-17 11:41:33 [scrapy] DEBUG: Crawled (200) <GET https://www.englandhandball.com/league/premier-handball-league> (referer: None)
+2019-03-17 11:41:33 [scrapy] ERROR: Spider error processing <GET https://www.englandhandball.com/league/premier-handball-league> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/scrapyrt/project/gdscraper/spiders/ehafixtures.py", line 25, in parse
+    self.teamIdF = response.meta["urls"]
+KeyError: 'urls'
+2019-03-17 11:41:33 [scrapy] INFO: Closing spider (finished)
+2019-03-17 11:41:33 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 504,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 14564,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 17, 11, 41, 33, 661335),
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 6,
+ 'memusage/max': 60510208,
+ 'memusage/startup': 60510208,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'spider_exceptions/KeyError': 1,
+ 'start_time': datetime.datetime(2019, 3, 17, 11, 41, 32, 470793)}
+2019-03-17 11:41:33 [scrapy] INFO: Spider closed (finished)

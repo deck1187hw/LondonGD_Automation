@@ -1,0 +1,340 @@
+2019-03-03 12:34:59 [scrapy] DEBUG: Crawled (200) <GET https://www.sporteasy.net/en/login/> (referer: None)
+2019-03-03 12:34:59 [scrapy] DEBUG: Redirecting (302) to <GET https://www.sporteasy.net/> from <POST https://www.sporteasy.net/en/login/>
+2019-03-03 12:34:59 [scrapy] DEBUG: Redirecting (302) to <GET https://www.sporteasy.net/en/home/> from <GET https://www.sporteasy.net/>
+2019-03-03 12:34:59 [scrapy] DEBUG: Crawled (200) <GET https://www.sporteasy.net/en/home/> (referer: https://www.sporteasy.net/en/login/)
+2019-03-03 12:35:00 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/> (referer: https://www.sporteasy.net/en/home/)
+2019-03-03 12:35:00 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/> (referer: https://www.sporteasy.net/en/home/)
+2019-03-03 12:35:01 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/> (referer: https://www.sporteasy.net/en/home/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6974123/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6912590/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6974119/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6974123/>
+{'itemAttendees': '[]',
+ 'itemDate': datetime.datetime(2019, 3, 28, 19, 0),
+ 'itemEventid': u'6974123',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6974123/',
+ 'itemLocation': '',
+ 'itemLocationLink': '',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:02 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6912590/>
+{'itemAttendees': '[]',
+ 'itemDate': datetime.datetime(2019, 3, 26, 19, 0),
+ 'itemEventid': u'6912590',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6912590/',
+ 'itemLocation': u'Copper Box Arena',
+ 'itemLocationLink': u'http://maps.google.com/?q=Queen Elizabeth Olympic Park, London E20 2ST, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:02 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6974119/>
+{'itemAttendees': '[]',
+ 'itemDate': datetime.datetime(2019, 3, 21, 19, 0),
+ 'itemEventid': u'6974119',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6974119/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6974106/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6974106/>
+{'itemAttendees': '["Jose J", "Jose J", "Aurelian Gug", "Marvin Gorgen", "Ayrton Gelin"]',
+ 'itemDate': datetime.datetime(2019, 3, 5, 20, 0),
+ 'itemEventid': u'6974106',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6974106/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967901/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6974111/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:02 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967888/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967901/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Janou Janssens", "Tania Corti", "Claudia Sch\\u00f6nb\\u00e4chler"]',
+ 'itemDate': datetime.datetime(2019, 3, 21, 20, 10),
+ 'itemEventid': u'6967901',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967901/',
+ 'itemLocation': u'Rokeby school',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 21',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6974111/>
+{'itemAttendees': '["Jose J", "Jose J", "Aurelian Gug", "Marvin Gorgen", "Ayrton Gelin"]',
+ 'itemDate': datetime.datetime(2019, 3, 14, 19, 0),
+ 'itemEventid': u'6974111',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6974111/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967888/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Tania Corti", "Claudia Sch\\u00f6nb\\u00e4chler"]',
+ 'itemDate': datetime.datetime(2019, 3, 25, 20, 0),
+ 'itemEventid': u'6967888',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967888/',
+ 'itemLocation': u'Petchey academy ',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London E8 2EY, UK',
+ 'itemName': u'Practice on Mon, Mar 25',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967886/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967887/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6912586/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967902/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967886/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Tania Corti", "Ilaria Pastena"]',
+ 'itemDate': datetime.datetime(2019, 3, 11, 20, 0),
+ 'itemEventid': u'6967886',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967886/',
+ 'itemLocation': u'Petchey academy ',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London E8 2EY, UK',
+ 'itemName': u'Practice on Mon, Mar 11',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967887/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Tania Corti", "Ilaria Pastena", "Claudia Sch\\u00f6nb\\u00e4chler"]',
+ 'itemDate': datetime.datetime(2019, 3, 18, 20, 0),
+ 'itemEventid': u'6967887',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967887/',
+ 'itemLocation': u'Petchey academy ',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London E8 2EY, UK',
+ 'itemName': u'Practice on Mon, Mar 18',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6912586/>
+{'itemAttendees': '["Th\\u00e9o Bougouin", "Th\\u00e9o Bougouin", "Jordi Ferrer-Torras", "Ayrton Gelin", "Adriano Stagni", "Jose J", "Aurelian Gug", "Marvin Gorgen"]',
+ 'itemDate': datetime.datetime(2019, 3, 19, 19, 0),
+ 'itemEventid': u'6912586',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6912586/',
+ 'itemLocation': u'Copper Box Arena',
+ 'itemLocationLink': u'http://maps.google.com/?q=Queen Elizabeth Olympic Park, London E20 2ST, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6974107/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967885/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967902/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Janou Janssens", "Tania Corti", "Claudia Sch\\u00f6nb\\u00e4chler", "Francesca Graham"]',
+ 'itemDate': datetime.datetime(2019, 3, 28, 20, 10),
+ 'itemEventid': u'6967902',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967902/',
+ 'itemLocation': u'Rokeby school',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 28',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6974107/>
+{'itemAttendees': '["Jose J", "Jose J", "Marvin Gorgen"]',
+ 'itemDate': datetime.datetime(2019, 3, 7, 19, 0),
+ 'itemEventid': u'6974107',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6974107/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967900/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967885/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Ilaria Pastena", "Christina Rehnberg"]',
+ 'itemDate': datetime.datetime(2019, 3, 4, 20, 0),
+ 'itemEventid': u'6967885',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967885/',
+ 'itemLocation': u'Petchey academy ',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London E8 2EY, UK',
+ 'itemName': u'Practice on Mon, Mar 4',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-1-1.sporteasy.net/event/6974108/> (referer: https://london-gd-1-1.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967893/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967900/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Janou Janssens", "Tania Corti"]',
+ 'itemDate': datetime.datetime(2019, 3, 14, 20, 10),
+ 'itemEventid': u'6967900',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967900/',
+ 'itemLocation': u'Rokeby school',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 14',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-1-1.sporteasy.net/event/6974108/>
+{'itemAttendees': '["Jose J", "Jose J", "Marvin Gorgen", "Ayrton Gelin"]',
+ 'itemDate': datetime.datetime(2019, 3, 12, 20, 0),
+ 'itemEventid': u'6974108',
+ 'itemLinkEvent': 'https://london-gd-1-1.sporteasy.net/event/6974108/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Training',
+ 'itemTeam': 1,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:03 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967893/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Tania Corti", "Claudia Sch\\u00f6nb\\u00e4chler"]',
+ 'itemDate': datetime.datetime(2019, 3, 19, 20, 0),
+ 'itemEventid': u'6967893',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967893/',
+ 'itemLocation': u'Copper Box',
+ 'itemLocationLink': u'http://maps.google.com/?q=Queen Elizabeth Olympic Park, London E20 2ST, UK',
+ 'itemName': u'Practice on Tue, Mar 19',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967914/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967918/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967914/>
+{'itemAttendees': '["Janou Janssens", "Janou Janssens"]',
+ 'itemDate': datetime.datetime(2019, 3, 26, 20, 0),
+ 'itemEventid': u'6967914',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967914/',
+ 'itemLocation': u'Copper Box',
+ 'itemLocationLink': u'http://maps.google.com/?q=London E20 3HB, UK',
+ 'itemName': u'Practice on Tue, Mar 26',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967906/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967918/>
+{'itemAttendees': '["Janou Janssens", "Janou Janssens", "Francesca Graham", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 28, 20, 15),
+ 'itemEventid': u'6967918',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967918/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 28',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:04 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967906/>
+{'itemAttendees': '["Helena Tisthammer", "Helena Tisthammer", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 25, 20, 0),
+ 'itemEventid': u'6967906',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967906/',
+ 'itemLocation': u'Petchey Academy',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London, UK',
+ 'itemName': u'Practice on Mon, Mar 25',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967917/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967917/>
+{'itemAttendees': '["Janou Janssens", "Janou Janssens", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 21, 20, 15),
+ 'itemEventid': u'6967917',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967917/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 21',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967905/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967905/>
+{'itemAttendees': '["Claudia Wessling", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 18, 20, 0),
+ 'itemEventid': u'6967905',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967905/',
+ 'itemLocation': u'Petchey Academy',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London, UK',
+ 'itemName': u'Practice on Mon, Mar 18',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967913/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967916/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:04 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967913/>
+{'itemAttendees': '["Janou Janssens", "Janou Janssens"]',
+ 'itemDate': datetime.datetime(2019, 3, 19, 20, 0),
+ 'itemEventid': u'6967913',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967913/',
+ 'itemLocation': u'Copper Box',
+ 'itemLocationLink': u'http://maps.google.com/?q=London E20 3HB, UK',
+ 'itemName': u'Practice on Tue, Mar 19',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:05 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967916/>
+{'itemAttendees': '["Claire Cousin", "Claire Cousin", "Janou Janssens", "Helena Tisthammer", "Alysha Martin", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 14, 20, 15),
+ 'itemEventid': u'6967916',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967916/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 14',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:05 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967894/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:05 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967904/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:05 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-1st-team.sporteasy.net/event/6967899/> (referer: https://london-gd-ladies-1st-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:05 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967894/>
+{'itemAttendees': '["Nikola Szymura", "Nikola Szymura", "Tania Corti", "Claudia Sch\\u00f6nb\\u00e4chler"]',
+ 'itemDate': datetime.datetime(2019, 3, 26, 20, 0),
+ 'itemEventid': u'6967894',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967894/',
+ 'itemLocation': u'Copper Box',
+ 'itemLocationLink': u'http://maps.google.com/?q=Queen Elizabeth Olympic Park, London E20 2ST, UK',
+ 'itemName': u'Practice on Tue, Mar 26',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:05 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967904/>
+{'itemAttendees': '["Claire Cousin", "Claire Cousin", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 11, 20, 0),
+ 'itemEventid': u'6967904',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967904/',
+ 'itemLocation': u'Petchey Academy',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London, UK',
+ 'itemName': u'Practice on Mon, Mar 11',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:05 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-1st-team.sporteasy.net/event/6967899/>
+{'itemAttendees': '["Juste Brazenaite", "Juste Brazenaite", "Nikola Szymura", "Janou Janssens"]',
+ 'itemDate': datetime.datetime(2019, 3, 7, 20, 10),
+ 'itemEventid': u'6967899',
+ 'itemLinkEvent': 'https://london-gd-ladies-1st-team.sporteasy.net/event/6967899/',
+ 'itemLocation': u'Rokeby school',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 7',
+ 'itemTeam': 2,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:05 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967903/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:05 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967903/>
+{'itemAttendees': '["Claire Cousin", "Claire Cousin", "Alysha Martin", "Kaisa Bentzen", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 4, 20, 0),
+ 'itemEventid': u'6967903',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967903/',
+ 'itemLocation': u'Petchey Academy',
+ 'itemLocationLink': u'http://maps.google.com/?q=Shacklewell Ln, London, UK',
+ 'itemName': u'Practice on Mon, Mar 4',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:06 [scrapy] DEBUG: Crawled (200) <GET https://london-gd-ladies-2nd-team.sporteasy.net/event/6967915/> (referer: https://london-gd-ladies-2nd-team.sporteasy.net/calendarlist/2018-2019/all/)
+2019-03-03 12:35:06 [scrapy] DEBUG: Scraped from <200 https://london-gd-ladies-2nd-team.sporteasy.net/event/6967915/>
+{'itemAttendees': '["Janou Janssens", "Janou Janssens", "Helena Tisthammer", "Alysha Martin", "Kaisa Bentzen", "Eva Birgitte Ringstad", "Claudia Wessling"]',
+ 'itemDate': datetime.datetime(2019, 3, 7, 20, 15),
+ 'itemEventid': u'6967915',
+ 'itemLinkEvent': 'https://london-gd-ladies-2nd-team.sporteasy.net/event/6967915/',
+ 'itemLocation': u'Rokeby School',
+ 'itemLocationLink': u'http://maps.google.com/?q=Barking Rd, London E16 4DD, UK',
+ 'itemName': u'Practice on Thu, Mar 7',
+ 'itemTeam': 4,
+ 'itemType': 'Practice'}
+2019-03-03 12:35:06 [scrapy] INFO: Closing spider (finished)
+2019-03-03 12:35:06 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 14764,
+ 'downloader/request_count': 35,
+ 'downloader/request_method_count/GET': 34,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 1194101,
+ 'downloader/response_count': 35,
+ 'downloader/response_status_count/200': 33,
+ 'downloader/response_status_count/302': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 3, 3, 12, 35, 6, 474823),
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 63,
+ 'log_count/INFO': 6,
+ 'memusage/max': 121085952,
+ 'memusage/startup': 121085952,
+ 'request_depth_max': 3,
+ 'response_received_count': 33,
+ 'scheduler/dequeued': 35,
+ 'scheduler/dequeued/memory': 35,
+ 'scheduler/enqueued': 35,
+ 'scheduler/enqueued/memory': 35,
+ 'start_time': datetime.datetime(2019, 3, 3, 12, 34, 58, 871676)}
+2019-03-03 12:35:06 [scrapy] INFO: Spider closed (finished)
