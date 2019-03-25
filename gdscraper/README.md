@@ -46,10 +46,15 @@ curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":
 | http://www.englandhandball.com/regional-development-league/regional-league-south-east-a/men |
 
 
-### GET SportEasy Trainings Matches
+### GET SportEasy Trainings PHL and Women RDL
 ```
 curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"https://www.sporteasy.net/en/login/"}, "spider_name": "sporteasytrainings"}'
   ```
+  
+### GET Teamer Trainings Men RDL
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"https://teamer.net/session/new"}, "spider_name": "teamer"}'
+  ```  
 
 
 
