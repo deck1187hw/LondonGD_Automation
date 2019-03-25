@@ -46,8 +46,13 @@ class TeamerSpider(scrapy.Spider):
 	    	yield Request(url=urlTeam,callback=self.loadSchedule)
 
     def loadSchedule(self, response):   
-        eventList = response.xpath('//*[contains(@class,\'content_box\')]/div')
-        for item in eventList:
+        for item in response.xpath('//*[contains(@class,\'content_box\')]/div'):
+        	attributes = item.xpath('@*').extract()
+        	id = 'NO'
+        	for attr in attributes:
+				print attr
+				if "event_" in attr:
+					id = attr
         	tit = item.xpath('.//h3/a/b//text()').extract_first()
         	if tit is not None and "Training" in tit:
 	        	itemSporteasy = SporteasyItem() 	
@@ -60,5 +65,7 @@ class TeamerSpider(scrapy.Spider):
 	        	itemSporteasy['itemDate'] = datetime.datetime.strptime(when3, "%a, %d %b, %Y  %I:%M%p")
 	        	itemSporteasy['itemTeam'] = 3
 	        	itemSporteasy['itemName'] = 'Training Men RDL'
+	        	ids = id.split("_")	        
+	        	itemSporteasy['itemEventid'] = ids[1]
 	        	self.events.append(itemSporteasy)
     	return self.events
