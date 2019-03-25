@@ -10,49 +10,28 @@ from scrapy.selector import Selector
 from scrapy.http import HtmlResponse
 from scrapy.loader import ItemLoader
 from scrapy.conf import settings
-from londongd.items import SporteasyItem
+from gdscraper.items import SporteasyItem
 from scrapy.conf import settings
 
-import MySQLdb
 
-class SizeClass(object):
-    pass
-    
-class MyEncoder(JSONEncoder):
-        def default(self, o):
-            return o.__dict__    
-
-class SporteasySpider(scrapy.Spider):
-    name = "sporteasy"
+class TrainingsSpider(scrapy.Spider):
+    name = "trainings"
     allowed_domains = ["sporteasy.net"]
-    mainUrl = 'https://shop.uhlsportcompany.com'
-    main_domain_prod = "https://london-gd-ladies-2nd-team.sporteasy.net"
-    db = MySQLdb.connect(host="localhost",user=settings.get('MYSQL_USER'),passwd=settings.get('MYSQL_PASSWORD'),db=settings.get('MYSQL_DB'))
-    custom_settings = {
-        'ITEM_PIPELINES': {
-            'londongd.pipelines.SporteasyPipeline':100
-        }
-    }    
     start_urls = ['https://www.sporteasy.net/en/login/']
     seasy_urls = ['https://london-gd-ladies-1st-team.sporteasy.net','https://london-gd-ladies-2nd-team.sporteasy.net',"https://london-gd-1-1.sporteasy.net"]
-    id_products = []
-    item_stocks = []
-    limit = ''
-    
+
     def __init__(self, limit='', *args, **kwargs):
         
-        super(SporteasySpider, self).__init__(*args, **kwargs)
-        
-        
-		    
+        super(TrainingsSpider, self).__init__(*args, **kwargs)
+
+
     def cleanText(self,text):
         if text:
             textFormatted = text.replace('\n', '').replace('\r', '').strip()
             return textFormatted.strip()
         else:
             return ''
-    
-            
+        
     def parse(self, response):
 	    return scrapy.FormRequest.from_response(
             response,
@@ -79,7 +58,6 @@ class SporteasySpider(scrapy.Spider):
 			print partialUrl
 	    	yield Request(url=urlTeam+partialUrl,meta={'urlTeam': urlTeam,'team':team},callback=self.loadSchedule)
     
-
     
     def loadSchedule(self, response):
         
@@ -98,11 +76,6 @@ class SporteasySpider(scrapy.Spider):
 								yield scrapy.Request(response.meta['urlTeam'] + link,meta={'team': response.meta['team']},callback=self.loadEventById)
 
         	
-				
-			
-			
-
-    
     def loadEventById(self,response):
 	    itemSporteasy = SporteasyItem()
 
@@ -165,8 +138,5 @@ class SporteasySpider(scrapy.Spider):
 
 
 	    if not cancelled:
-	    	yield itemSporteasy
-		
-		
-		
-		
+	    	return itemSporteasy				    
+        
