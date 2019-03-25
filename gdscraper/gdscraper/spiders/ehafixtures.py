@@ -12,7 +12,6 @@ class EhafixturesSpider(scrapy.Spider):
     teamId = ''
     typeF = ''
     teamIdF = ''
-    teamsItem = []
 
     def __init__(self, type='', teamId='', *args, **kwargs):
 	    self.type = type

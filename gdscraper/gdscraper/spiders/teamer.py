@@ -17,6 +17,7 @@ class TeamerSpider(scrapy.Spider):
     allowed_domains = ["teamer.net"]
     start_urls = ['https://teamer.net/session/new']
     seasy_urls = ["https://teamer.net/teams/111660398-london-gd-2--3-men/events"]
+    events = []
 
     def __init__(self, limit='', *args, **kwargs):
         
@@ -50,6 +51,14 @@ class TeamerSpider(scrapy.Spider):
         	tit = item.xpath('.//h3/a/b//text()').extract_first()
         	if tit is not None and "Training" in tit:
 	        	itemSporteasy = SporteasyItem() 	
-	        	itemSporteasy['itemLocation'] = item.xpath('.//table/tr[1]/td[2]//text()').extract()
-	        	itemSporteasy['itemDate'] = item.xpath('.//table/tr[2]/td[2]//text()').extract()
-	        	print tit
+	        	itemSporteasy['itemLocation'] = item.xpath('.//table/tr[1]/td[2]//text()').extract_first()
+	        	when1 = item.xpath('.//table/tr[2]/td[2]//text()').extract_first()
+	        	when2 = when1.split("@")
+	        	when2[0] = self.cleanText(when2[0])
+	        	when2[1] = self.cleanText(when2[1])
+	        	when3 = when2[0]+' '+when2[1]
+	        	itemSporteasy['itemDate'] = datetime.datetime.strptime(when3, "%a, %d %b, %Y  %I:%M%p")
+	        	itemSporteasy['itemTeam'] = 3
+	        	itemSporteasy['itemName'] = 'Training Men RDL'
+	        	self.events.append(itemSporteasy)
+    	return self.events
