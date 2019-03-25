@@ -5,6 +5,9 @@
 Automation tools built in Python Scrapy to automate common tasks for London GD Handball club website
 
 
+**Note: This is deprecated, please visit https://github.com/deck1187hw/londongdautomation/tree/master/gdscraper for updated repo**
+
+
 # Basic Instruction to run a spider 
 
 
