@@ -47,6 +47,34 @@ class ehamatchesItem(scrapy.Item):
 	server = scrapy.Field()
 	date = scrapy.Field()
 
+class kempaStoreItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	itemCatid = scrapy.Field()
+	itemCatslug = scrapy.Field()
+	itemTitle = scrapy.Field()
+	itemNew = scrapy.Field()
+	itemURL = scrapy.Field()
+	itemId = scrapy.Field()
+	itemAllDescription = scrapy.Field()
+	itemInfoColors = scrapy.Field()
+	itemInfoTechnology = scrapy.Field()
+	itemInfoSizes = scrapy.Field()
+	itemInfoAvUntil = scrapy.Field()
+	itemImages = scrapy.Field()
+	itemInfoAvFrom = scrapy.Field()
+	itemDescription1 = scrapy.Field()
+	
+	
+	# Housekeeping fields
+	url = scrapy.Field()
+	project = scrapy.Field()
+	spider = scrapy.Field()
+	server = scrapy.Field()
+	date = scrapy.Field()	
+
 class SporteasyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()

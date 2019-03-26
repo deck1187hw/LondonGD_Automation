@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
+from gdscraper.items import kempaStoreItem
 
 class KempaSpider(scrapy.Spider):
     name = "kempa"
@@ -22,4 +22,10 @@ class KempaSpider(scrapy.Spider):
         	yield scrapy.Request(url='https://www.kempa-sports.com'+link, callback=self.parseProduct)
     
     def parseProduct(self, response):
-        print response.url
+	    itemKempa = kempaStoreItem()
+	    itemKempa['itemTitle'] = self.getTitle(response)
+	    print itemKempa
+        
+    
+    def getTitle(self, item):
+	    return item.xpath('//*[@id="contentheader"]/h1/text()').extract_first()
