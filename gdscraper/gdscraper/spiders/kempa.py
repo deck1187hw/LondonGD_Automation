@@ -31,12 +31,10 @@ class KempaSpider(scrapy.Spider):
 
     def parseProduct(self, response):
         itemKempa = kempaStoreItem()
-        itemKempa['itemTitle'] = self.getTitle(response)
-        itemKempa['itemAllDescription'] = self.getDescription(response)
+        itemKempa['itemTitle'] = response.xpath('//*[@id="contentheader"]/h1/text()').extract_first()
+        itemKempa['itemAllDescription'] = response.xpath('//*[@id="contentwrap"]/div/div[3]/p/text()').extract_first()
+        itemKempa['itemId'] = response.xpath('//*[@id="contentheader"]/h2/text()').extract_first().replace('Art. ', '')
+        itemKempa['itemInfoSizes'] = response.xpath('//*[@id="contentwrap"]/div/div[3]/div[2]/div/div/text()').extract_first()
+        
+        
         print itemKempa
-
-    def getTitle(self, item):
-        return item.xpath('//*[@id="contentheader"]/h1/text()').extract_first()
-
-    def getDescription(self, item):
-        return item.xpath('//*[@id="contentwrap"]/div/div[3]/p/text()').extract_first()
