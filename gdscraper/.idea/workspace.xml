@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141f479f-9ce8-4bee-878d-2715730acf48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gdscraper/spiders/kempa.py" beforeDir="false" afterPath="$PROJECT_DIR$/gdscraper/spiders/kempa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gdscraper/spiders/kempashop.py" beforeDir="false" afterPath="$PROJECT_DIR$/gdscraper/spiders/kempashop.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gdscraper/spiders/kempa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="198">
+              <caret line="44" column="36" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="36" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../scrapy_app/londongd/spiders/kempastock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+            <state relative-caret-position="112">
+              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="73" selection-end-column="42" />
               <folding>
                 <element signature="e#92#105#0" expanded="true" />
               </folding>
@@ -39,10 +39,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gdscraper/spiders/kempashop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="e#71#121#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gdscraper/spiders/teamer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="186">
+              <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -82,6 +82,9 @@
       <find>loadProductByID</find>
       <find>shop_login</find>
       <find>body</find>
+      <find>InitSpider</find>
+      <find>make_requests_from_url</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -293,20 +296,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/teamer.py">
+    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/kempa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="198">
+          <caret line="44" column="36" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="36" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/kempa.py">
+    <entry file="file://$PROJECT_DIR$/gdscraper/spiders/teamer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        <state relative-caret-position="186">
+          <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
@@ -315,8 +318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../scrapy_app/londongd/spiders/kempastock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        <state relative-caret-position="112">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="73" selection-end-column="42" />
           <folding>
             <element signature="e#92#105#0" expanded="true" />
           </folding>
@@ -325,10 +328,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gdscraper/spiders/kempashop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#71#121#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
