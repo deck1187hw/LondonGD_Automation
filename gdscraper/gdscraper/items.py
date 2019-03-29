@@ -117,6 +117,18 @@ class EhafixturesItem(scrapy.Item):
 	date = scrapy.Field()
 
 
+class StockItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    
+	# Primary fields
+	title = scrapy.Field()
+	id = scrapy.Field()
+	sizes = scrapy.Field()	
+	available = scrapy.Field()	
+	stock = scrapy.Field()	
+	light = scrapy.Field()
+
 class SporteasyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
