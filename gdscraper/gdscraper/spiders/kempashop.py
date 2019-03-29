@@ -4,6 +4,7 @@ from scrapy.http import FormRequest
 from scrapy.http import Request
 from scrapy import log
 from json import JSONEncoder
+import json
 from gdscraper.items import StockItem
 
 
@@ -16,6 +17,7 @@ class DemoSpider(scrapy.Spider):
     login_page = "https://shop.uhlsportcompany.com/uhlsport/b2b/init.do?language=en&shop=1040_UK"
     urls_to_parse = ["https://shop.uhlsportcompany.com/uhlsport/catalog/categorieInPath/(layout=6_4_6_1&uiarea=1)/.do?key=0/0000000015/0000000061"]
     products = []
+    prodsMeta = "hola"
 
     def __init__(self, products='', *args, **kwargs):
         self.products  = products.split('|')
@@ -32,8 +34,11 @@ class DemoSpider(scrapy.Spider):
     def start_requests(self):
         # Start by logging in
         return [FormRequest(self.login_page, formdata={'UserId': '101229551', 'password': 'call77'}, callback=self.after_login)]
+        
 
     def after_login(self, response):
+    	print "META!: "
+    	self.prodsMeta = json.dumps(response.meta)
         self.log('Login Successful. Parsing all other URLs')
         # Here we get ALL Ids from kempa store and generate the urls
         return Request(
@@ -65,7 +70,8 @@ class DemoSpider(scrapy.Spider):
         finalSizes_info_av = self.clean_product_sizes(productSizes_stock)
         finalSizes_date_av = self.clean_date_stock(productSizes_date)
 
-        itemStock['id'] = self.cleanText(productId)
+        #itemStock['id'] = self.cleanText(productId)
+        itemStock['id'] = self.prodsMeta
         itemStock['title'] = self.cleanText(productTitle)
         itemStock['sizes'] = MyEncoder().encode(finalSizes)
         itemStock['stock'] = MyEncoder().encode(finalSizes_info_av)
