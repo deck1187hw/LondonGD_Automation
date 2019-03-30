@@ -32,10 +32,9 @@ class DemoSpider(scrapy.Spider):
             return ''
 
     def parse(self, response):
-	    logger.debug('Log message')
 	    if "products" in response.meta:
-	    	self.products = response.meta['products'].split('|')
-            return [FormRequest(self.login_page, formdata={'UserId': '101229551', 'password': 'call77'}, callback=self.after_login)]
+	    	self.products = response.meta["products"].split('|')
+	    return [FormRequest(self.login_page, formdata={'UserId': '101229551', 'password': 'call77'}, callback=self.after_login)]
 
 
     def after_login(self, response):

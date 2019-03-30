@@ -57,6 +57,22 @@ curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":
   ```  
 
 
+### GET Kempa items
+Get ALL items from Kempa store in all categories
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":""}, "spider_name": "kempa", "start_requests": true}'
+  ```  
+
+
+### GET Kempa stock items
+Get stock for all items defined as products meta parameters (|) separated
+```
+curl https://automation.londongdhandball.co.uk/crawl.json -d '{"request":{"url":"https://shop.uhlsportcompany.com/uhlsport/b2b/init.do?language=en&shop=1040_UK", "meta": {"products":"200849403"}}, "spider_name": "kempashop"}'
+  ```  
+  
+
+
+
 
 ## CLI call example
 ### Get all EHA users

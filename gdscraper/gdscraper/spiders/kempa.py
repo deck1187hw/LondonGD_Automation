@@ -24,8 +24,7 @@ class KempaSpider(scrapy.Spider):
     def parseLinks(self, response):
         for item in response.xpath('//*[@id="footer"]/div/div[1]/div[1]/ul/li'):
             link = item.css('a::attr(href)').extract_first()
-            if link == '/en/products/category/110/shoes':  # remove this shit
-                yield scrapy.Request(url='https://www.kempa-sports.com' + link, callback=self.parseCategory)
+            yield scrapy.Request(url='https://www.kempa-sports.com' + link, callback=self.parseCategory)
 
 
     def parseCategory(self, response):
