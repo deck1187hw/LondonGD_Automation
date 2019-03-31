@@ -69,7 +69,7 @@ class DemoSpider(scrapy.Spider):
         finalSizes_info_av = self.clean_product_sizes(productSizes_stock)
         finalSizes_date_av = self.clean_date_stock(productSizes_date)
 
-        itemStock['id'] = self.cleanText(productId)
+        itemStock['id'] = self.cleanText(response.meta['itemid'])
         itemStock['title'] = self.cleanText(productTitle)
         itemStock['sizes'] = MyEncoder().encode(finalSizes)
         itemStock['stock'] = MyEncoder().encode(finalSizes_info_av)
