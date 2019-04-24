@@ -22,20 +22,23 @@ class KempaSpider(scrapy.Spider):
         yield scrapy.Request(url='https://www.kempa-sports.com/en/start', callback=self.parseLinks)
 
     def parseLinks(self, response):
-        for item in response.xpath('//*[@id="footer"]/div/div[1]/div[1]/ul/li'):
+        for item in response.xpath('//*[@id="footer"]/div/div[1]/div/ul/li'):
             link = item.css('a::attr(href)').extract_first()
-            yield scrapy.Request(url='https://www.kempa-sports.com' + link, callback=self.parseCategory)
+            cat_name = item.css('a::text').extract_first()
+            yield scrapy.Request(url='https://www.kempa-sports.com' + link, meta={'cat_name': cat_name, 'cat_slug': link}, callback=self.parseCategory)
 
 
     def parseCategory(self, response):
         for item in response.xpath('//*[@id="productlist"]/li'):
             link = item.css('a::attr(href)').extract_first()
-            yield scrapy.Request(url='https://www.kempa-sports.com' + link, callback=self.parseProduct)
+            yield scrapy.Request(url='https://www.kempa-sports.com' + link, meta={'cat_name': response.meta['cat_name'], 'cat_slug': response.meta['cat_slug']}, callback=self.parseProduct)
 
 
 
     def parseProduct(self, response):
         itemKempa = kempaStoreItem()
+        itemKempa['itemCatName'] = response.meta['cat_name']
+        itemKempa['itemCatslug'] = response.meta['cat_slug']
         itemKempa['itemTitle'] = response.xpath('//*[@id="contentheader"]/h1/text()').extract_first()
         itemKempa['itemAllDescription'] = self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/p/text()').extract_first())
         itemKempa['itemId'] = response.xpath('//*[@id="contentheader"]/h2/text()').extract_first().replace('Art. ', '')

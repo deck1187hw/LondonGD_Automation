@@ -53,6 +53,7 @@ class kempaStoreItem(scrapy.Item):
     
 	# Primary fields
 	itemCatid = scrapy.Field()
+	itemCatName = scrapy.Field()
 	itemCatslug = scrapy.Field()
 	itemTitle = scrapy.Field()
 	itemNew = scrapy.Field()
@@ -73,7 +74,7 @@ class kempaStoreItem(scrapy.Item):
 	project = scrapy.Field()
 	spider = scrapy.Field()
 	server = scrapy.Field()
-	date = scrapy.Field()	
+	date = scrapy.Field()
 
 class SporteasyItem(scrapy.Item):
     # define the fields for your item here like:
@@ -151,4 +152,3 @@ class SporteasyItem(scrapy.Item):
 	spider = scrapy.Field()
 	server = scrapy.Field()
 	date = scrapy.Field()			
-		
