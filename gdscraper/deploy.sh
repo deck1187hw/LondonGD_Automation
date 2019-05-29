@@ -22,6 +22,10 @@ ssh  ${SSH_USERNAME}@${SSH_HOST} "
 
     cd ${PROD_PATH}
 
+    echo \"Pulling latest changes...\"
+    git reset --hard
+    git pull
+
     docker stop apigd;
     docker rm apigd;
     docker run -p 9080:9080 -tid --restart unless-stopped --name apigd -v ${PROD_PATH}:/scrapyrt/project scrapinghub/scrapyrt

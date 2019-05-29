@@ -43,7 +43,7 @@ class KempaSpider(scrapy.Spider):
         itemKempa['itemCatslug'] = response.meta['cat_slug']
         itemKempa['itemTitle'] = response.xpath('//*[@id="contentheader"]/h1/text()').extract_first()
         desc1 = self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/p/text()').extract_first())
-        itemKempa['itemAllDescription'] = "-"
+        itemKempa['itemAllDescription'] = desc1+self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/ul').extract_first())
 
         itemKempa['itemId'] = response.xpath('//*[@id="contentheader"]/h2/text()').extract_first().replace('Art. ', '')
         itemKempa['itemInfoSizes'] = self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/div[2]/div/div/text()').extract_first())
