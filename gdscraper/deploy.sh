@@ -23,6 +23,7 @@ ssh  ${SSH_USERNAME}@${SSH_HOST} "
 
 
     cd ${PROD_PATH}
+    pwd
 
 
 ";
