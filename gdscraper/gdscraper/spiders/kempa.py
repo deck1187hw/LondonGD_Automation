@@ -43,13 +43,12 @@ class KempaSpider(scrapy.Spider):
         itemKempa['itemCatslug'] = response.meta['cat_slug']
         itemKempa['itemTitle'] = response.xpath('//*[@id="contentheader"]/h1/text()').extract_first()
         desc1 = self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/p/text()').extract_first())
-        itemKempa['itemAllDescription'] = desc1+self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/ul').extract_first())
+        itemKempa['itemAllDescription'] = "-"
 
         itemKempa['itemId'] = response.xpath('//*[@id="contentheader"]/h2/text()').extract_first().replace('Art. ', '')
         itemKempa['itemInfoSizes'] = self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/div[2]/div/div/text()').extract_first())
         itemKempa['itemInfoColors'] = self.cleanText(response.xpath('//*[@id="contentwrap"]/div/div[3]/div[1]/div').extract_first())
         itemKempa['itemInfoTechnology'] = self.add_url_to_list_images(response.xpath('//*[@id="contentwrap"]/div/div[3]/div[3]/div//img/@src').extract())
-        itemKempa['itemImages'] = self.add_url_to_list_images(response.xpath('//*[@class="mainimage"]/img/@src').extract())
         itemKempa['itemImages'] = self.add_url_to_list_images(response.xpath('//*[@id="views"]/div/img/@data-mainurl').extract())
         #logging.debug('\n\n----This is a debug message \n\n %s', itemKempa['itemAllDescription'])
 

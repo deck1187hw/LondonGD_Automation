@@ -20,8 +20,6 @@ git push origin ${DEPLOY_BRANCH} --force
 # -- LOG IN VIA SSH TO REMOTE --
 ssh  ${SSH_USERNAME}@${SSH_HOST} "
 
-
-
     cd ${PROD_PATH}
 
     docker stop apigd;
