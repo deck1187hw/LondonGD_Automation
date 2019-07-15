@@ -43,7 +43,7 @@ class TrainingsSpider(scrapy.Spider):
     def getUrls(self,response):
 
 	    for urlTeam in self.seasy_urls:
-	    	partialUrl = "/calendarlist/2018-2019/all/"
+	    	partialUrl = "/calendarlist/2019-2020/all/"
 	    	print urlTeam
 	    	if "ladies-1st" in urlTeam:
 	    		team = 2
@@ -139,4 +139,3 @@ class TrainingsSpider(scrapy.Spider):
 
 	    if not cancelled:
 	    	return itemSporteasy				    
-        
