@@ -53,7 +53,6 @@ class TrainingsSpider(scrapy.Spider):
 	    		team = 1
 	    	if "beach-handball" in urlTeam:
 	    		team = 10
-	    		partialUrl = "/calendarlist/ebt-2017-18/all/"
 	    	
 			print partialUrl
 	    	yield Request(url=urlTeam+partialUrl,meta={'urlTeam': urlTeam,'team':team},callback=self.loadSchedule)
