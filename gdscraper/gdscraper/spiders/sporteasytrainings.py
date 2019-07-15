@@ -56,7 +56,7 @@ class SporteasySpider(scrapy.Spider):
     def getUrls(self, response):
 
         for urlTeam in self.seasy_urls:
-            partialUrl = "/calendarlist/2018-2019/all/"
+            partialUrl = "/calendarlist/2019-2020/all/"
             print
             urlTeam
             if "ladies-1st" in urlTeam:
@@ -67,7 +67,6 @@ class SporteasySpider(scrapy.Spider):
                 team = 1
             if "beach-handball" in urlTeam:
                 team = 10
-                partialUrl = "/calendarlist/ebt-2017-18/all/"
 
                 print
                 partialUrl
