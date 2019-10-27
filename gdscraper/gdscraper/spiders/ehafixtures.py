@@ -7,7 +7,7 @@ from gdscraper.items import EhafixturesItem
 class EhafixturesSpider(scrapy.Spider):
     name = 'ehafixtures'
     allowed_domains = ['englandhandball.com']
-    start_urls = ['https://www.englandhandball.com/regional-development-league/regional-league-south-east-a/men'] # This is an example only for CLI
+    start_urls = ['https://www.englandhandball.com/league/premier-handball-league'] # This is an example only for CLI
     type = ''
     teamId = ''
     typeF = ''

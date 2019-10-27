@@ -10,9 +10,9 @@ class EhamatchesSpider(scrapy.Spider):
     name = "ehamatches"
     allowed_domains = ["englandhandball.com"]
     start_urls = ["http://www.englandhandball.com/league/premier-handball-league",
-                  "http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1-1/women",
-                  "http://www.englandhandball.com/regional-development-league/regional-league-south-east-tier-1/men",
-                  "http://www.englandhandball.com/regional-development-league/regional-league-south-east-a/men"]
+                  "https://www.englandhandball.com/regional-development-league/regional-league-south-east-c/men",
+                  "https://www.englandhandball.com/regional-development-league/regional-league-south-east-b/men",
+                  "https://www.englandhandball.com/regional-development-league/regional-league-south-east/women"]
     teamsItem = []
 
     def __init__(self, user='', password='', *args, **kwargs):
@@ -21,15 +21,15 @@ class EhamatchesSpider(scrapy.Spider):
     def parse(self, response):
         leagueName = response.css('div.page-title div.container h1::text').extract_first()
 
-        if "Regional League South East Tier 1 - women" in leagueName:
+        if "Regional League South East - women's" in leagueName:
             gamesLi = response.css('div.female .carousel-container ul li')
             self.parse_team(gamesLi, 4)
 
-        if "Regional League South East  Tier 1 - men" in leagueName:
+        if "Regional League South East C - men's" in leagueName:
             gamesLi = response.css('div.male .carousel-container ul li')
             self.parse_team(gamesLi, 5)
 
-        if "Regional League South East A - men" in leagueName:
+        if "Regional League South East B - men's" in leagueName:
             gamesLi = response.css('div.male .carousel-container ul li')
             self.parse_team(gamesLi, 3)
 
