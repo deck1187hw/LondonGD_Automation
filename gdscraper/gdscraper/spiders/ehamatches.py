@@ -9,10 +9,7 @@ from gdscraper.items import ehamatchesItem
 class EhamatchesSpider(scrapy.Spider):
     name = "ehamatches"
     allowed_domains = ["englandhandball.com"]
-    start_urls = ["http://www.englandhandball.com/league/premier-handball-league",
-                  "https://www.englandhandball.com/regional-development-league/regional-league-south-east-c/men",
-                  "https://www.englandhandball.com/regional-development-league/regional-league-south-east-b/men",
-                  "https://www.englandhandball.com/regional-development-league/regional-league-south-east/women"]
+    start_urls = ["https://www.englandhandball.com/regional-development-league/regional-league-south-east/women"]
     teamsItem = []
 
     def __init__(self, user='', password='', *args, **kwargs):
